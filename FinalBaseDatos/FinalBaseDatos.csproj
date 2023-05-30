@@ -87,5 +87,11 @@
   <ItemGroup>
     <None Include="Resources\ArcoIris.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arcoirispng.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rainbowglitter.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -16,7 +16,7 @@ namespace FinalBaseDatos
         
         public static SqlConnection ConexionDB()
         {
-            string connString = "Data Source = ATHENEA; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
+            string connString = "Data Source = emiliana; Initial Catalog = GuarderiaFinal; User ID = emiliana; Password = Password";
             SqlConnection conn = new SqlConnection(connString);
             try
             {
@@ -56,6 +56,16 @@ namespace FinalBaseDatos
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
         {
 
         }
