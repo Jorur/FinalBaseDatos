@@ -13,22 +13,9 @@ namespace FinalBaseDatos
 {
     public partial class Inicio : Form
     {
-        
-        public static SqlConnection ConexionDB()
-        {
-            string connString = "Data Source = emiliana ; Initial Catalog = GuarderiaFinal; User ID = emiliana; Password = Passw0rd";
-            SqlConnection conn = new SqlConnection(connString);
-            try
-            {
-                conn.Open();
-                MessageBox.Show("Conexion con la base de datos exitosa");
-            }
-            catch(Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
-            return conn;
-        }
+
+        private PerInf admisiones;
+
         public Inicio()
         {
             InitializeComponent();
@@ -56,8 +43,8 @@ namespace FinalBaseDatos
 
         private void button1_Click(object sender, EventArgs e)
         {
-            InsertarInf insertarInf = new InsertarInf();
-            insertarInf.Show();
+            admisiones = new PerInf();
+            admisiones.Show();
             this.Hide();
         }
 

@@ -30,11 +30,11 @@
         {
             System.Windows.Forms.Label label2;
             this.Titulo = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.RegistroInfante = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.Menus = new System.Windows.Forms.Button();
+            this.Servicios = new System.Windows.Forms.Button();
+            this.Tienda = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -70,18 +70,18 @@
             this.Titulo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Titulo.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button1
+            // RegistroInfante
             // 
-            this.button1.BackColor = System.Drawing.Color.Thistle;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Font = new System.Drawing.Font("Corbel", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(399, 367);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 62);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Registo Infante";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.RegistroInfante.BackColor = System.Drawing.Color.Thistle;
+            this.RegistroInfante.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.RegistroInfante.Font = new System.Drawing.Font("Corbel", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegistroInfante.Location = new System.Drawing.Point(399, 349);
+            this.RegistroInfante.Name = "RegistroInfante";
+            this.RegistroInfante.Size = new System.Drawing.Size(123, 62);
+            this.RegistroInfante.TabIndex = 2;
+            this.RegistroInfante.Text = "Registo Infante";
+            this.RegistroInfante.UseVisualStyleBackColor = false;
+            this.RegistroInfante.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -94,54 +94,46 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // button2
+            // Menus
             // 
-            this.button2.Location = new System.Drawing.Point(31, 203);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Menús";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Menus.Location = new System.Drawing.Point(50, 110);
+            this.Menus.Name = "Menus";
+            this.Menus.Size = new System.Drawing.Size(75, 23);
+            this.Menus.TabIndex = 4;
+            this.Menus.Text = "Menús";
+            this.Menus.UseVisualStyleBackColor = true;
+            this.Menus.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // Servicios
             // 
-            this.button3.Location = new System.Drawing.Point(31, 315);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Servicios ";
-            this.button3.UseVisualStyleBackColor = true;
+            this.Servicios.Location = new System.Drawing.Point(50, 222);
+            this.Servicios.Name = "Servicios";
+            this.Servicios.Size = new System.Drawing.Size(75, 23);
+            this.Servicios.TabIndex = 5;
+            this.Servicios.Text = "Servicios ";
+            this.Servicios.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // Tienda
             // 
-            this.button4.Location = new System.Drawing.Point(31, 426);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Tienda";
-            this.button4.UseVisualStyleBackColor = true;
+            this.Tienda.Location = new System.Drawing.Point(50, 333);
+            this.Tienda.Name = "Tienda";
+            this.Tienda.Size = new System.Drawing.Size(75, 23);
+            this.Tienda.TabIndex = 6;
+            this.Tienda.Text = "Tienda";
+            this.Tienda.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Location = new System.Drawing.Point(112, 442);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 18);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "new";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            this.label1.Location = new System.Drawing.Point(131, 349);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label3.Location = new System.Drawing.Point(112, 332);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 18);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "new";
+            this.label3.Location = new System.Drawing.Point(131, 239);
+
             // 
             // pictureBox2
             // 
@@ -150,6 +142,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(100, 50);
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
+
             // 
             // Inicio
             // 
@@ -160,10 +153,10 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Tienda);
+            this.Controls.Add(this.Servicios);
+            this.Controls.Add(this.Menus);
+            this.Controls.Add(this.RegistroInfante);
             this.Controls.Add(label2);
             this.Controls.Add(this.Titulo);
             this.Controls.Add(this.pictureBox1);
@@ -180,11 +173,11 @@
         #endregion
 
         private System.Windows.Forms.Label Titulo;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button RegistroInfante;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button Menus;
+        private System.Windows.Forms.Button Servicios;
+        private System.Windows.Forms.Button Tienda;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;

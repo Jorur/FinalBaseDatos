@@ -49,6 +49,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PerInf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerInf.Designer.cs">
+      <DependentUpon>PerInf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertarPer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertarPer.Designer.cs">
+      <DependentUpon>InsertarPer.cs</DependentUpon>
+    </Compile>
     <Compile Include="InsertarInf.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +80,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InsertarInf.resx">
       <DependentUpon>InsertarInf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertarPer.resx">
+      <DependentUpon>InsertarPer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerInf.resx">
+      <DependentUpon>PerInf.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

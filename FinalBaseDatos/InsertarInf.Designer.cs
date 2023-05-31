@@ -28,41 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.NombreInf = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.FechaNacimiento = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.FechaIngreso = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.Tarifa = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // NombreInf
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 45);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(153, 22);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.NombreInf.Location = new System.Drawing.Point(12, 45);
+            this.NombreInf.Name = "NombreInf";
+            this.NombreInf.Size = new System.Drawing.Size(153, 22);
+            this.NombreInf.TabIndex = 0;
+            this.NombreInf.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 16);
+            this.label1.Size = new System.Drawing.Size(117, 16);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Nombre del Infante";
+            this.label1.Text = "Nombre Completo";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox2
+            // FechaNacimiento
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 116);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(150, 22);
-            this.textBox2.TabIndex = 2;
+            this.FechaNacimiento.Location = new System.Drawing.Point(12, 116);
+            this.FechaNacimiento.Name = "FechaNacimiento";
+            this.FechaNacimiento.Size = new System.Drawing.Size(150, 22);
+            this.FechaNacimiento.TabIndex = 2;
             // 
             // label2
             // 
@@ -73,12 +73,13 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Fecha de Nacimiento";
             // 
-            // textBox3
+            // FechaIngreso
             // 
-            this.textBox3.Location = new System.Drawing.Point(12, 181);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(147, 22);
-            this.textBox3.TabIndex = 4;
+            this.FechaIngreso.Location = new System.Drawing.Point(12, 181);
+            this.FechaIngreso.Name = "FechaIngreso";
+            this.FechaIngreso.Size = new System.Drawing.Size(147, 22);
+            this.FechaIngreso.TabIndex = 4;
+            this.FechaIngreso.TextChanged += new System.EventHandler(this.FechaIngreso_TextChanged);
             // 
             // label3
             // 
@@ -90,12 +91,12 @@
             this.label3.Text = "Fecha de Ingreso";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBox4
+            // Tarifa
             // 
-            this.textBox4.Location = new System.Drawing.Point(12, 239);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(150, 22);
-            this.textBox4.TabIndex = 6;
+            this.Tarifa.Location = new System.Drawing.Point(12, 239);
+            this.Tarifa.Name = "Tarifa";
+            this.Tarifa.Size = new System.Drawing.Size(150, 22);
+            this.Tarifa.TabIndex = 6;
             // 
             // label4
             // 
@@ -108,11 +109,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(693, 403);
+            this.button1.Location = new System.Drawing.Point(689, 401);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(87, 27);
             this.button1.TabIndex = 8;
-            this.button1.Text = "Aceptar";
+            this.button1.Text = "Siguiente";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -123,16 +124,15 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.Tarifa);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.FechaIngreso);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.FechaNacimiento);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.NombreInf);
             this.Name = "InsertarInf";
             this.Text = "Nuevo Infante";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.InsertarInf_FormClosing);
             this.Load += new System.EventHandler(this.InsertarInf_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -141,13 +141,13 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox NombreInf;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox FechaNacimiento;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox FechaIngreso;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox Tarifa;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
     }
