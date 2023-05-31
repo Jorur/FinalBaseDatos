@@ -63,16 +63,6 @@ namespace FinalBaseDatos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ArcoIris {
-            get {
-                object obj = ResourceManager.GetObject("ArcoIris", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap bluecloudpng {
             get {
                 object obj = ResourceManager.GetObject("bluecloudpng", resourceCulture);
@@ -83,9 +73,29 @@ namespace FinalBaseDatos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap depositphotos_523518512_stock_illustration_thin_line_baby_background_outline {
+            get {
+                object obj = ResourceManager.GetObject("depositphotos_523518512_stock_illustration_thin_line_baby_background_outline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap rainbowglitter {
             get {
                 object obj = ResourceManager.GetObject("rainbowglitter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap treechildrens {
+            get {
+                object obj = ResourceManager.GetObject("treechildrens", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

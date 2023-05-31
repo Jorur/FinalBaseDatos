@@ -33,9 +33,9 @@
             // 
             // RegInf
             // 
-            this.RegInf.Location = new System.Drawing.Point(32, 38);
+            this.RegInf.Location = new System.Drawing.Point(112, 85);
             this.RegInf.Name = "RegInf";
-            this.RegInf.Size = new System.Drawing.Size(75, 23);
+            this.RegInf.Size = new System.Drawing.Size(163, 133);
             this.RegInf.TabIndex = 0;
             this.RegInf.Text = "Registrar Infante";
             this.RegInf.UseVisualStyleBackColor = true;
@@ -45,6 +45,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::FinalBaseDatos.Properties.Resources.depositphotos_523518512_stock_illustration_thin_line_baby_background_outline;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.RegInf);
             this.Name = "PerInf";
