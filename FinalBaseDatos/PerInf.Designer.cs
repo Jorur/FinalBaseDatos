@@ -56,6 +56,7 @@
             this.NewPer.TabIndex = 1;
             this.NewPer.Text = "Nuevo Responsable";
             this.NewPer.UseVisualStyleBackColor = false;
+            this.NewPer.Click += new System.EventHandler(this.NewPer_Click);
             // 
             // ModificarPerInf
             // 

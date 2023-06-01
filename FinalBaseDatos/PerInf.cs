@@ -13,6 +13,10 @@ namespace FinalBaseDatos
     public partial class PerInf : Form
     {
         private InsertarInf insInf;
+        private Inicio inicio;
+        private PersonaNueva personaNueva;
+        private CambiosPi cambios;
+       
         public PerInf()
         {
             InitializeComponent();
@@ -28,16 +32,29 @@ namespace FinalBaseDatos
 
         private void PerInf_Load(object sender, EventArgs e)
         {
+
         }
 
         private void ModificarPerInf_Click(object sender, EventArgs e)
         {
-
+            cambios= new CambiosPi();
+            cambios.Show();
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            inicio = new Inicio();
+            inicio.Show();
+            this.Close();
+        }
 
+        private void NewPer_Click(object sender, EventArgs e)
+        {
+            
+            personaNueva = new PersonaNueva();
+            personaNueva.Show();
+            this.Close();
         }
     }
 }

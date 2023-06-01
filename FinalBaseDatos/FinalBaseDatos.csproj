@@ -49,6 +49,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CambiarTel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CambiarTel.Designer.cs">
+      <DependentUpon>CambiarTel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CambiosPi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CambiosPi.Designer.cs">
+      <DependentUpon>CambiosPi.cs</DependentUpon>
+    </Compile>
     <Compile Include="DarBaja.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,8 +98,20 @@
     <Compile Include="Inicio.Designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="PersonaNueva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonaNueva.Designer.cs">
+      <DependentUpon>PersonaNueva.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CambiarTel.resx">
+      <DependentUpon>CambiarTel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CambiosPi.resx">
+      <DependentUpon>CambiosPi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DarBaja.resx">
       <DependentUpon>DarBaja.cs</DependentUpon>
     </EmbeddedResource>
@@ -105,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PerInf.resx">
       <DependentUpon>PerInf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonaNueva.resx">
+      <DependentUpon>PersonaNueva.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -156,6 +183,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\family.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo-textura-cohete-espacial-artesania-arcilla-plastilina-azul-ninos.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

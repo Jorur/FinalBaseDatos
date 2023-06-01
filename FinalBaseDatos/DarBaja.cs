@@ -12,6 +12,7 @@ namespace FinalBaseDatos
 {
     public partial class DarBaja : Form
     {
+        private CambiosPi cambios;
         public DarBaja()
         {
             InitializeComponent();
@@ -25,6 +26,18 @@ namespace FinalBaseDatos
         private void DarBaja_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void tablaniños_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void volver1_Click(object sender, EventArgs e)
+        {
+            cambios= new CambiosPi();
+            cambios.Show();
+            this.Close();
         }
     }
 }

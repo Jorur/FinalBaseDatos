@@ -38,7 +38,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(232, 101);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 16);
             this.label1.TabIndex = 0;
@@ -46,9 +46,9 @@
             // 
             // Ci
             // 
-            this.Ci.Location = new System.Drawing.Point(16, 33);
+            this.Ci.Location = new System.Drawing.Point(235, 121);
             this.Ci.Name = "Ci";
-            this.Ci.Size = new System.Drawing.Size(179, 22);
+            this.Ci.Size = new System.Drawing.Size(246, 22);
             this.Ci.TabIndex = 1;
             this.Ci.TextChanged += new System.EventHandler(this.Ci_TextChanged);
             // 
@@ -65,7 +65,7 @@
             // Relacion
             // 
             this.Relacion.AutoSize = true;
-            this.Relacion.Location = new System.Drawing.Point(13, 70);
+            this.Relacion.Location = new System.Drawing.Point(232, 194);
             this.Relacion.Name = "Relacion";
             this.Relacion.Size = new System.Drawing.Size(61, 16);
             this.Relacion.TabIndex = 3;
@@ -73,9 +73,9 @@
             // 
             // Parentesco
             // 
-            this.Parentesco.Location = new System.Drawing.Point(16, 90);
+            this.Parentesco.Location = new System.Drawing.Point(235, 214);
             this.Parentesco.Name = "Parentesco";
-            this.Parentesco.Size = new System.Drawing.Size(176, 22);
+            this.Parentesco.Size = new System.Drawing.Size(246, 22);
             this.Parentesco.TabIndex = 4;
             // 
             // EncargadoEx
