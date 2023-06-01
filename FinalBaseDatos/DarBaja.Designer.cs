@@ -42,6 +42,7 @@
             this.MatriInf.Name = "MatriInf";
             this.MatriInf.Size = new System.Drawing.Size(241, 22);
             this.MatriInf.TabIndex = 0;
+            this.MatriInf.TextChanged += new System.EventHandler(this.MatriInf_TextChanged);
             // 
             // label1
             // 
