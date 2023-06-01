@@ -21,5 +21,10 @@ namespace FinalBaseDatos
         {
 
         }
+
+        private void DarBaja_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
