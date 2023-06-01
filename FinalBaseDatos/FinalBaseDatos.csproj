@@ -133,5 +133,20 @@
   <ItemGroup>
     <None Include="Resources\bluecloudpng.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\niños.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\treechildrens.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\depositphotos_523518512-stock-illustration-thin-line-baby-background-outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\family.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

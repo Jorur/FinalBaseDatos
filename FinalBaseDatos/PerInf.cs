@@ -25,10 +25,19 @@ namespace FinalBaseDatos
             this.Hide();
         }
 
+
         private void PerInf_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void ModificarPerInf_Click(object sender, EventArgs e)
         {
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

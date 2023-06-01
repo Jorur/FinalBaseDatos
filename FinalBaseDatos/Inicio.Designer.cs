@@ -32,15 +32,11 @@
             this.Titulo = new System.Windows.Forms.Label();
             this.RegistroInfante = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Menus = new System.Windows.Forms.Button();
-            this.Servicios = new System.Windows.Forms.Button();
-            this.Tienda = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.Buscar = new System.Windows.Forms.Button();
             label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -48,8 +44,8 @@
             label2.AutoSize = true;
             label2.BackColor = System.Drawing.Color.Transparent;
             label2.Font = new System.Drawing.Font("Lucida Calligraphy", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label2.ForeColor = System.Drawing.Color.Turquoise;
-            label2.Location = new System.Drawing.Point(311, 26);
+            label2.ForeColor = System.Drawing.Color.DeepPink;
+            label2.Location = new System.Drawing.Point(366, 9);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(316, 60);
             label2.TabIndex = 1;
@@ -61,8 +57,8 @@
             this.Titulo.AccessibleName = "Titulo";
             this.Titulo.AutoSize = true;
             this.Titulo.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Titulo.ForeColor = System.Drawing.Color.IndianRed;
-            this.Titulo.Location = new System.Drawing.Point(394, 86);
+            this.Titulo.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.Titulo.Location = new System.Drawing.Point(378, 69);
             this.Titulo.Name = "Titulo";
             this.Titulo.Size = new System.Drawing.Size(152, 25);
             this.Titulo.TabIndex = 0;
@@ -72,99 +68,81 @@
             // 
             // RegistroInfante
             // 
-            this.RegistroInfante.BackColor = System.Drawing.Color.Thistle;
+            this.RegistroInfante.BackColor = System.Drawing.Color.HotPink;
             this.RegistroInfante.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.RegistroInfante.Font = new System.Drawing.Font("Corbel", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegistroInfante.Location = new System.Drawing.Point(399, 349);
+            this.RegistroInfante.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegistroInfante.Location = new System.Drawing.Point(376, 212);
             this.RegistroInfante.Name = "RegistroInfante";
-            this.RegistroInfante.Size = new System.Drawing.Size(123, 62);
+            this.RegistroInfante.Size = new System.Drawing.Size(123, 183);
             this.RegistroInfante.TabIndex = 2;
-            this.RegistroInfante.Text = "Registo Infante";
+            this.RegistroInfante.Text = "Admisiones";
             this.RegistroInfante.UseVisualStyleBackColor = false;
             this.RegistroInfante.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::FinalBaseDatos.Properties.Resources.rainbowglitter;
-            this.pictureBox1.Location = new System.Drawing.Point(121, 101);
+            this.pictureBox1.Image = global::FinalBaseDatos.Properties.Resources.treechildrens;
+            this.pictureBox1.Location = new System.Drawing.Point(-3, -2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(686, 405);
+            this.pictureBox1.Size = new System.Drawing.Size(363, 502);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // Menus
+            // button1
             // 
-            this.Menus.Location = new System.Drawing.Point(50, 110);
-            this.Menus.Name = "Menus";
-            this.Menus.Size = new System.Drawing.Size(75, 23);
-            this.Menus.TabIndex = 4;
-            this.Menus.Text = "Menús";
-            this.Menus.UseVisualStyleBackColor = true;
-            this.Menus.Click += new System.EventHandler(this.button2_Click);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(590, 212);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(123, 183);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Consumos";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // Servicios
+            // button2
             // 
-            this.Servicios.Location = new System.Drawing.Point(50, 222);
-            this.Servicios.Name = "Servicios";
-            this.Servicios.Size = new System.Drawing.Size(75, 23);
-            this.Servicios.TabIndex = 5;
-            this.Servicios.Text = "Servicios ";
-            this.Servicios.UseVisualStyleBackColor = true;
+            this.button2.BackColor = System.Drawing.Color.Orange;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button2.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(789, 212);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(123, 183);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Finanzas";
+            this.button2.UseVisualStyleBackColor = false;
             // 
-            // Tienda
+            // Buscar
             // 
-            this.Tienda.Location = new System.Drawing.Point(50, 333);
-            this.Tienda.Name = "Tienda";
-            this.Tienda.Size = new System.Drawing.Size(75, 23);
-            this.Tienda.TabIndex = 6;
-            this.Tienda.Text = "Tienda";
-            this.Tienda.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Location = new System.Drawing.Point(131, 349);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label3.Location = new System.Drawing.Point(131, 239);
-
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(399, 315);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
-
+            this.Buscar.BackColor = System.Drawing.Color.LightCyan;
+            this.Buscar.Font = new System.Drawing.Font("Corbel", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Buscar.Location = new System.Drawing.Point(789, 69);
+            this.Buscar.Name = "Buscar";
+            this.Buscar.Size = new System.Drawing.Size(133, 23);
+            this.Buscar.TabIndex = 6;
+            this.Buscar.Text = "Buscar";
+            this.Buscar.UseVisualStyleBackColor = false;
             // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Cornsilk;
+            this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(939, 500);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.Tienda);
-            this.Controls.Add(this.Servicios);
-            this.Controls.Add(this.Menus);
+            this.Controls.Add(this.Buscar);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.RegistroInfante);
             this.Controls.Add(label2);
             this.Controls.Add(this.Titulo);
-            this.Controls.Add(this.pictureBox1);
             this.Name = "Inicio";
             this.Text = "Guarderia Arco Iris";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,12 +153,9 @@
         private System.Windows.Forms.Label Titulo;
         private System.Windows.Forms.Button RegistroInfante;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button Menus;
-        private System.Windows.Forms.Button Servicios;
-        private System.Windows.Forms.Button Tienda;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Buscar;
     }
 }
 
