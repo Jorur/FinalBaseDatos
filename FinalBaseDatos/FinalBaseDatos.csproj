@@ -49,20 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-
-    <Compile Include="CambiosPerInf.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CambiosPerInf.Designer.cs">
-      <DependentUpon>CambiosPerInf.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DarBaja.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DarBaja.Designer.cs">
-      <DependentUpon>DarBaja.cs</DependentUpon>
-    </Compile>
-
     <Compile Include="EncargadoEx.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,7 +56,6 @@
       <DependentUpon>EncargadoEx.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Infante.cs" />
-
     <Compile Include="PerInf.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,16 +82,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-
-    <EmbeddedResource Include="CambiosPerInf.resx">
-      <DependentUpon>CambiosPerInf.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DarBaja.resx">
-      <DependentUpon>DarBaja.cs</DependentUpon>
-
     <EmbeddedResource Include="EncargadoEx.resx">
       <DependentUpon>EncargadoEx.cs</DependentUpon>
-
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
