@@ -49,6 +49,7 @@
             this.Controls.Add(this.RegInf);
             this.Name = "PerInf";
             this.Text = "Admisiones";
+            this.Load += new System.EventHandler(this.PerInf_Load);
             this.ResumeLayout(false);
 
         }

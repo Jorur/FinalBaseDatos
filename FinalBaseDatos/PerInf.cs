@@ -24,5 +24,11 @@ namespace FinalBaseDatos
             insInf.Show();
             this.Hide();
         }
+
+        private void PerInf_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

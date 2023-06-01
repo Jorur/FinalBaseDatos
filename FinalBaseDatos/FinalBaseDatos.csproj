@@ -49,6 +49,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EncargadoEx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EncargadoEx.Designer.cs">
+      <DependentUpon>EncargadoEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infante.cs" />
     <Compile Include="PerInf.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +82,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EncargadoEx.resx">
+      <DependentUpon>EncargadoEx.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
