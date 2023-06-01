@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+
             this.MatriInf = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.mostrarInf = new System.Windows.Forms.DataGridView();
@@ -93,28 +94,14 @@
             // DarBaja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.RosyBrown;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.back);
-            this.Controls.Add(this.confi);
-            this.Controls.Add(this.mostrarInf);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.MatriInf);
-            this.Name = "DarBaja";
-            this.Text = "DarBaja";
-            ((System.ComponentModel.ISupportInitialize)(this.mostrarInf)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
 
+            this.components = new System.ComponentModel.Container();
+
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "DarBaja";
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox MatriInf;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView mostrarInf;
-        private System.Windows.Forms.Button confi;
-        private System.Windows.Forms.Button back;
     }
 }
