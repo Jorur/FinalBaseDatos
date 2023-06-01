@@ -16,5 +16,10 @@ namespace FinalBaseDatos
         {
             InitializeComponent();
         }
+
+        private void MatriInf_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
