@@ -88,6 +88,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DarBaja.resx">
+      <DependentUpon>DarBaja.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EncargadoEx.resx">
       <DependentUpon>EncargadoEx.cs</DependentUpon>
     </EmbeddedResource>
