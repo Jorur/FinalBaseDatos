@@ -10,7 +10,6 @@ using System.Windows.Forms;
 
 namespace FinalBaseDatos
 {
-    //Dar de baja
     public partial class DarBaja : Form
     {
         public DarBaja()
