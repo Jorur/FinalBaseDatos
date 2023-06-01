@@ -18,7 +18,7 @@ namespace FinalBaseDatos
         private PerInf perinf;
         public static SqlConnection ConexionDB()
         {
-            string connString = "Data Source = ATHENEA ; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
+            string connString = "Data Source = emiliana ; Initial Catalog = GuarderiaFinal; User ID = emiliana; Password = Password";
             SqlConnection conn = new SqlConnection(connString);
             try
             {

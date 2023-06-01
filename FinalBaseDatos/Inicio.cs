@@ -13,7 +13,9 @@ namespace FinalBaseDatos
 {
     public partial class Inicio : Form
     {
+
         private PerInf admisiones;
+
         public Inicio()
         {
             InitializeComponent();
