@@ -15,6 +15,7 @@ namespace FinalBaseDatos
     {
         private Inicio inicio;
         private InsertarPer persona;
+        private PerInf perinf;
         public static SqlConnection ConexionDB()
         {
             string connString = "Data Source = emiliana ; Initial Catalog = GuarderiaFinal; User ID = emiliana; Password = Password";
@@ -62,33 +63,11 @@ namespace FinalBaseDatos
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection conexion = ConexionDB();
-            SqlCommand comm = new SqlCommand("InsertarInfante",conexion);
-            comm.CommandType = System.Data.CommandType.StoredProcedure;
-            comm.Parameters.AddWithValue("@nombreinf", NombreInf.Text);
-            comm.Parameters.AddWithValue("@fachanacimiento",FechaNacimiento.Text);
-            comm.Parameters.AddWithValue("@fechaalta", FechaIngreso.Text);
-            comm.Parameters.AddWithValue("@tarifames", Tarifa.Text);
-
-            try
-            {
-                comm.ExecuteNonQuery();
-                MessageBox.Show("Se han registrado los datos con exito!!!!");
-            }
-            
-            catch(Exception error)
-            {
-                MessageBox.Show(error.Message);
-            }
-
-            //MessageBox.Show(NombreInf.Text + " " + FechaNacimiento.Text);
-            persona = new InsertarPer(NombreInf.Text, FechaNacimiento.Text);
+            Infante inf;
+            inf = new Infante(NombreInf.Text, FechaNacimiento.Text, FechaIngreso.Text, float.Parse(Tarifa.Text));
+            persona = new InsertarPer(inf);
             persona.Show();
-
-            conexion.Close();
-            comm.Dispose();
-            this.Close();
-
+            this.Hide();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -99,6 +78,13 @@ namespace FinalBaseDatos
         private void FechaIngreso_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Volver_Click(object sender, EventArgs e)
+        {
+            perinf = new PerInf();
+            perinf.Show();
+            this.Close();
         }
     }
 }

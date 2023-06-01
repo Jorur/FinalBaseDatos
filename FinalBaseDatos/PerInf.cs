@@ -25,7 +25,16 @@ namespace FinalBaseDatos
             insInf.Show();
             this.Hide();
         }
+
         //aqui vamos al campo de modificacion : o dar de baja o cambiar un tel
+
+
+
+        private void PerInf_Load(object sender, EventArgs e)
+        {
+        }
+
+
         private void ModificarPerInf_Click(object sender, EventArgs e)
         {
             cambiosPerInf = new CambiosPerInf();
