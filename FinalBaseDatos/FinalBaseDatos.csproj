@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DarBaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DarBaja.Designer.cs">
+      <DependentUpon>DarBaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="EncargadoEx.cs">
       <SubType>Form</SubType>
     </Compile>
