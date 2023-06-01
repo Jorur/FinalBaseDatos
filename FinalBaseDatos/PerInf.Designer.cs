@@ -62,7 +62,7 @@
             this.ModificarPerInf.BackColor = System.Drawing.Color.LavenderBlush;
             this.ModificarPerInf.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ModificarPerInf.Font = new System.Drawing.Font("Corbel", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ModificarPerInf.Location = new System.Drawing.Point(598, 398);
+            this.ModificarPerInf.Location = new System.Drawing.Point(581, 390);
             this.ModificarPerInf.Name = "ModificarPerInf";
             this.ModificarPerInf.Size = new System.Drawing.Size(95, 40);
             this.ModificarPerInf.TabIndex = 2;
