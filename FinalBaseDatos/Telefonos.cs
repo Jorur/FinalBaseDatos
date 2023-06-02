@@ -14,6 +14,7 @@ namespace FinalBaseDatos
     {
         private CambiarTel cambiarTel;
         private EliminarTel eliminarTel;
+        private CambiosPi atras;
         public Telefonos()
         {
             InitializeComponent();
@@ -31,6 +32,13 @@ namespace FinalBaseDatos
         {
             eliminarTel.Show();
             this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            atras = new CambiosPi();
+            atras.Show();
+            this.Close();
         }
     }
 }

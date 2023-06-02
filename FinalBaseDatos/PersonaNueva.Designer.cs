@@ -84,14 +84,14 @@
             // 
             // nroMatricula
             // 
-            this.nroMatricula.Location = new System.Drawing.Point(577, 143);
+            this.nroMatricula.Location = new System.Drawing.Point(524, 118);
             this.nroMatricula.Name = "nroMatricula";
             this.nroMatricula.Size = new System.Drawing.Size(175, 22);
             this.nroMatricula.TabIndex = 5;
             // 
             // Parent
             // 
-            this.Parent.Location = new System.Drawing.Point(577, 216);
+            this.Parent.Location = new System.Drawing.Point(524, 191);
             this.Parent.Name = "Parent";
             this.Parent.Size = new System.Drawing.Size(175, 22);
             this.Parent.TabIndex = 6;
@@ -140,7 +140,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(574, 121);
+            this.label1.Location = new System.Drawing.Point(521, 96);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(128, 16);
             this.label1.TabIndex = 11;
@@ -150,7 +150,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(577, 195);
+            this.label2.Location = new System.Drawing.Point(524, 170);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 16);
             this.label2.TabIndex = 12;
@@ -160,7 +160,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(577, 80);
+            this.label3.Location = new System.Drawing.Point(502, 40);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(175, 25);
             this.label3.TabIndex = 13;
@@ -169,7 +169,7 @@
             // Confirmar
             // 
             this.Confirmar.BackColor = System.Drawing.Color.RosyBrown;
-            this.Confirmar.Location = new System.Drawing.Point(610, 290);
+            this.Confirmar.Location = new System.Drawing.Point(559, 310);
             this.Confirmar.Name = "Confirmar";
             this.Confirmar.Size = new System.Drawing.Size(118, 62);
             this.Confirmar.TabIndex = 14;
@@ -194,7 +194,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(900, 450);
+            this.ClientSize = new System.Drawing.Size(820, 450);
             this.Controls.Add(this.volver);
             this.Controls.Add(this.Confirmar);
             this.Controls.Add(this.label3);

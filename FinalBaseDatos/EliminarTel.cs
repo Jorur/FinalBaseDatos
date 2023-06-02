@@ -14,6 +14,7 @@ namespace FinalBaseDatos
     public partial class EliminarTel : Form
     {
         private Inicio inicio;
+        private Telefonos telefonos;
         private static SqlConnection ConexionDb()
         {
             string connString = "Data Source = ATHENEA ; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
@@ -56,6 +57,13 @@ namespace FinalBaseDatos
             inicio.Show();
             this.Close();
 
+        }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            telefonos = new Telefonos();
+            telefonos.Show();
+            this.Close();
         }
     }
 }

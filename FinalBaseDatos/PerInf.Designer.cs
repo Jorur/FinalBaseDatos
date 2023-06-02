@@ -84,12 +84,15 @@
             // 
             // Alergia
             // 
-            this.Alergia.Location = new System.Drawing.Point(472, 407);
+            this.Alergia.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.Alergia.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Alergia.Font = new System.Drawing.Font("Corbel", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Alergia.Location = new System.Drawing.Point(472, 398);
             this.Alergia.Name = "Alergia";
-            this.Alergia.Size = new System.Drawing.Size(107, 23);
+            this.Alergia.Size = new System.Drawing.Size(107, 40);
             this.Alergia.TabIndex = 4;
             this.Alergia.Text = "Alergias";
-            this.Alergia.UseVisualStyleBackColor = true;
+            this.Alergia.UseVisualStyleBackColor = false;
             this.Alergia.Click += new System.EventHandler(this.Alergia_Click);
             // 
             // PerInf

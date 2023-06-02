@@ -13,7 +13,7 @@ namespace FinalBaseDatos
 {
     public partial class CambiarTel : Form
     {
-        private CambiosPi nuevo;
+        private Telefonos nuevo;
         private Inicio inicio;
         private static SqlConnection ConexionDb()
         {
@@ -37,7 +37,7 @@ namespace FinalBaseDatos
 
         private void volver1_Click(object sender, EventArgs e)
         {
-            nuevo = new CambiosPi();
+            nuevo = new Telefonos();
             nuevo.Show();
             this.Close();
         }

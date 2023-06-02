@@ -14,6 +14,7 @@ namespace FinalBaseDatos
     public partial class InsertarAlergia : Form
     {
         private Inicio inicio;
+        private PerInf volviendo;
         private static SqlConnection ConexionDb()
         {
             string connString = "Data Source = ATHENEA ; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
@@ -56,6 +57,13 @@ namespace FinalBaseDatos
             inicio = new Inicio();
             inicio.Show();
             this.Close();
+        }
+
+        private void volv_Click(object sender, EventArgs e)
+        {
+            volviendo = new PerInf();
+            volviendo.Show();
+            this.Close ();
         }
     }
 }

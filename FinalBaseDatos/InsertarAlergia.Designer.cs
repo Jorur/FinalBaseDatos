@@ -33,55 +33,74 @@
             this.Nro = new System.Windows.Forms.Label();
             this.NroMatricula = new System.Windows.Forms.TextBox();
             this.Conf = new System.Windows.Forms.Button();
+            this.volv = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(77, 40);
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 85);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 16);
+            this.label1.Size = new System.Drawing.Size(242, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ingrediente al que le tiene alergia";
             // 
             // Ingrediente
             // 
-            this.Ingrediente.Location = new System.Drawing.Point(80, 74);
+            this.Ingrediente.Location = new System.Drawing.Point(258, 85);
             this.Ingrediente.Name = "Ingrediente";
-            this.Ingrediente.Size = new System.Drawing.Size(202, 22);
+            this.Ingrediente.Size = new System.Drawing.Size(192, 22);
             this.Ingrediente.TabIndex = 1;
             // 
             // Nro
             // 
             this.Nro.AutoSize = true;
-            this.Nro.Location = new System.Drawing.Point(80, 116);
+            this.Nro.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Nro.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nro.Location = new System.Drawing.Point(15, 161);
             this.Nro.Name = "Nro";
-            this.Nro.Size = new System.Drawing.Size(195, 16);
+            this.Nro.Size = new System.Drawing.Size(228, 18);
             this.Nro.TabIndex = 2;
             this.Nro.Text = "Numero de matricula del infante";
             // 
             // NroMatricula
             // 
-            this.NroMatricula.Location = new System.Drawing.Point(83, 148);
+            this.NroMatricula.Location = new System.Drawing.Point(258, 158);
             this.NroMatricula.Name = "NroMatricula";
             this.NroMatricula.Size = new System.Drawing.Size(192, 22);
             this.NroMatricula.TabIndex = 3;
             // 
             // Conf
             // 
-            this.Conf.Location = new System.Drawing.Point(276, 243);
+            this.Conf.BackColor = System.Drawing.Color.DarkOrange;
+            this.Conf.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Conf.Location = new System.Drawing.Point(121, 243);
             this.Conf.Name = "Conf";
-            this.Conf.Size = new System.Drawing.Size(201, 23);
+            this.Conf.Size = new System.Drawing.Size(201, 47);
             this.Conf.TabIndex = 4;
-            this.Conf.Text = "Confirmar";
-            this.Conf.UseVisualStyleBackColor = true;
+            this.Conf.Text = "Confirmar Alergia";
+            this.Conf.UseVisualStyleBackColor = false;
             this.Conf.Click += new System.EventHandler(this.Conf_Click);
+            // 
+            // volv
+            // 
+            this.volv.Location = new System.Drawing.Point(28, 415);
+            this.volv.Name = "volv";
+            this.volv.Size = new System.Drawing.Size(92, 23);
+            this.volv.TabIndex = 5;
+            this.volv.Text = "Volver";
+            this.volv.UseVisualStyleBackColor = true;
+            this.volv.Click += new System.EventHandler(this.volv_Click);
             // 
             // InsertarAlergia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSalmon;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.volv);
             this.Controls.Add(this.Conf);
             this.Controls.Add(this.NroMatricula);
             this.Controls.Add(this.Nro);
@@ -101,5 +120,6 @@
         private System.Windows.Forms.Label Nro;
         private System.Windows.Forms.TextBox NroMatricula;
         private System.Windows.Forms.Button Conf;
+        private System.Windows.Forms.Button volv;
     }
 }

@@ -71,7 +71,7 @@
             this.conf.Font = new System.Drawing.Font("Corbel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.conf.Location = new System.Drawing.Point(548, 300);
             this.conf.Name = "conf";
-            this.conf.Size = new System.Drawing.Size(86, 50);
+            this.conf.Size = new System.Drawing.Size(99, 50);
             this.conf.TabIndex = 3;
             this.conf.Text = "Confirmar";
             this.conf.UseVisualStyleBackColor = true;
