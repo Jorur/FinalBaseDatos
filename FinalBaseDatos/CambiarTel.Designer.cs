@@ -34,6 +34,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.volver1 = new System.Windows.Forms.Button();
             this.confi = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Telant = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // carnet
@@ -94,6 +96,23 @@
             this.confi.TabIndex = 6;
             this.confi.Text = "Confirmar cambio";
             this.confi.UseVisualStyleBackColor = false;
+            this.confi.Click += new System.EventHandler(this.confi_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(248, 146);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(178, 16);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Numero de Telefono antiguo";
+            // 
+            // Telant
+            // 
+            this.Telant.Location = new System.Drawing.Point(251, 177);
+            this.Telant.Name = "Telant";
+            this.Telant.Size = new System.Drawing.Size(248, 22);
+            this.Telant.TabIndex = 8;
             // 
             // CambiarTel
             // 
@@ -101,6 +120,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Telant);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.confi);
             this.Controls.Add(this.volver1);
             this.Controls.Add(this.label2);
@@ -122,5 +143,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button volver1;
         private System.Windows.Forms.Button confi;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox Telant;
     }
 }

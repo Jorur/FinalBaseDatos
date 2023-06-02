@@ -14,7 +14,7 @@ namespace FinalBaseDatos
     {
         private PerInf volver;
         private DarBaja darbaja;
-        private CambiarTel cambiarTel;
+        private Telefonos Telefono;
         public CambiosPi()
         {
             InitializeComponent();
@@ -36,8 +36,8 @@ namespace FinalBaseDatos
 
         private void CamPer_Click(object sender, EventArgs e)
         {
-            cambiarTel = new CambiarTel();
-            cambiarTel.Show();
+            Telefono = new Telefonos();
+            Telefono.Show();
             this.Close();
         }
     }
