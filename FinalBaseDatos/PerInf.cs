@@ -16,6 +16,7 @@ namespace FinalBaseDatos
         private Inicio inicio;
         private PersonaNueva personaNueva;
         private CambiosPi cambios;
+        private InsertarAlergia insertarAlergia;
        
         public PerInf()
         {
@@ -54,6 +55,13 @@ namespace FinalBaseDatos
             
             personaNueva = new PersonaNueva();
             personaNueva.Show();
+            this.Close();
+        }
+
+        private void Alergia_Click(object sender, EventArgs e)
+        {
+            insertarAlergia = new InsertarAlergia();
+            insertarAlergia.Show();
             this.Close();
         }
     }

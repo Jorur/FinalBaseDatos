@@ -32,6 +32,7 @@
             this.NewPer = new System.Windows.Forms.Button();
             this.ModificarPerInf = new System.Windows.Forms.Button();
             this.atras = new System.Windows.Forms.Button();
+            this.Alergia = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // RegInf
@@ -81,6 +82,16 @@
             this.atras.UseVisualStyleBackColor = true;
             this.atras.Click += new System.EventHandler(this.button1_Click);
             // 
+            // Alergia
+            // 
+            this.Alergia.Location = new System.Drawing.Point(472, 407);
+            this.Alergia.Name = "Alergia";
+            this.Alergia.Size = new System.Drawing.Size(107, 23);
+            this.Alergia.TabIndex = 4;
+            this.Alergia.Text = "Alergias";
+            this.Alergia.UseVisualStyleBackColor = true;
+            this.Alergia.Click += new System.EventHandler(this.Alergia_Click);
+            // 
             // PerInf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -88,6 +99,7 @@
             this.BackgroundImage = global::FinalBaseDatos.Properties.Resources.fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Alergia);
             this.Controls.Add(this.atras);
             this.Controls.Add(this.ModificarPerInf);
             this.Controls.Add(this.NewPer);
@@ -105,5 +117,6 @@
         private System.Windows.Forms.Button NewPer;
         private System.Windows.Forms.Button ModificarPerInf;
         private System.Windows.Forms.Button atras;
+        private System.Windows.Forms.Button Alergia;
     }
 }
