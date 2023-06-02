@@ -14,8 +14,9 @@ namespace FinalBaseDatos
 {
     public partial class InsertarPer : Form
     {
-        private string nroMatricula;
-        private string nacimiento;
+        private Inicio inicio;
+        private Infante inf;
+        private EncargadoEx encargado;
         public static SqlConnection ConexionDB()
         {
             string connString = "Data Source = ATHENEA ; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
@@ -31,11 +32,11 @@ namespace FinalBaseDatos
             }
             return conn;
         }
-        public InsertarPer(string infante, string fechaNac)
+        public InsertarPer(Infante infante)
         {
             InitializeComponent();
-            nroMatricula = infante;
-            nacimiento = fechaNac;
+            inf = infante;
+            inicio = new Inicio();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -47,45 +48,32 @@ namespace FinalBaseDatos
         {
             //Procedimiento de Insertar Persona
             SqlConnection conexion = ConexionDB();
-            SqlCommand comm = new SqlCommand("InsertarPersona", conexion);
+            SqlCommand comm = new SqlCommand("RegInf", conexion);
             try 
             {
                 comm.CommandType = System.Data.CommandType.StoredProcedure;
-                comm.Parameters.AddWithValue("@cipersona", Ci.Text);
-                comm.Parameters.AddWithValue("@nombrepers", NombreEncargado.Text);
-                comm.Parameters.AddWithValue("@direccion", Direccion.Text);
-
+                comm.Parameters.AddWithValue("@infnt", inf.Nombre);
+                comm.Parameters.AddWithValue("@nacimiento", inf.FechaNacimiento);
+                comm.Parameters.AddWithValue("@alta", inf.FechaAlta);
+                comm.Parameters.AddWithValue("@tarifa", inf.TarifaMes);
+                comm.Parameters.AddWithValue("@ciP", Ci.Text);
+                comm.Parameters.AddWithValue("@persona", NombreEncargado.Text);
+                comm.Parameters.AddWithValue("@dir", Direccion.Text);
+                comm.Parameters.AddWithValue("@parent", Parentesco.Text);
+                comm.Parameters.AddWithValue("@tel", Celular.Text);
+                comm.Parameters.AddWithValue("@nroCuent", CuentaBco.Text);
+                comm.Parameters.AddWithValue("@banc", Banco.Text);
                 comm.ExecuteNonQuery();
                 MessageBox.Show("Se ha registrado con exito!!!");
             }
             catch(Exception error)
             {
-                MessageBox.Show(error.Message);
+                MessageBox.Show("Hubo un error al ingresar los datos... Por favor verificar");
+                //MessageBox.Show(error.Message);
             }
+            inicio.Show();
             comm.Dispose();
-
-            //Insertar Parentesco
-            comm = new SqlCommand("InsertarParent", conexion);
-            try
-            {
-                comm.CommandType = System.Data.CommandType.StoredProcedure;
-                comm.Parameters.AddWithValue("@inf", nroMatricula);
-                comm.Parameters.AddWithValue("@ci", Ci.Text);
-                comm.Parameters.AddWithValue("@Parentesco", Parentesco.Text);
-                comm.Parameters.AddWithValue("@nac", nacimiento);   
-                comm.ExecuteNonQuery();
-            }
-            catch(Exception error)
-            {
-                MessageBox.Show(error.Message);
-            }
-            NombreEncargado.Clear();
-            Direccion.Clear();
-            Ci.Clear();
-            Parentesco.Clear();
-
             conexion.Close();
-            comm.Dispose();
             this.Close();
 
 
@@ -97,6 +85,29 @@ namespace FinalBaseDatos
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void InsertarPer_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            inicio.ShowInicio();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            encargado = new EncargadoEx(inf);
+            encargado.Show();
+            this.Close();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }

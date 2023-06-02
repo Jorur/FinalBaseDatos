@@ -124,8 +124,19 @@
   <data name="depositphotos_523518512_stock_illustration_thin_line_baby_background_outline" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\depositphotos_523518512-stock-illustration-thin-line-baby-background-outline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+
   <data name="PhotoRoom_20230531_181445" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PhotoRoom_20230531_181445.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+
+  <data name="family" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\family.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fondo_textura_cohete_espacial_artesania_arcilla_plastilina_azul_ninos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondo-textura-cohete-espacial-artesania-arcilla-plastilina-azul-ninos.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="rainbowglitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rainbowglitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

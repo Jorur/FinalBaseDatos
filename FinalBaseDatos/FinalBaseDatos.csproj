@@ -49,6 +49,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CambiarTel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CambiarTel.Designer.cs">
+      <DependentUpon>CambiarTel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CambiosPi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CambiosPi.Designer.cs">
+      <DependentUpon>CambiosPi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DarBaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DarBaja.Designer.cs">
+      <DependentUpon>DarBaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarTel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarTel.Designer.cs">
+      <DependentUpon>EliminarTel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EncargadoEx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EncargadoEx.Designer.cs">
+      <DependentUpon>EncargadoEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertarAlergia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertarAlergia.Designer.cs">
+      <DependentUpon>InsertarAlergia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Infante.cs" />
     <Compile Include="PerInf.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,10 +110,40 @@
     <Compile Include="Inicio.Designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="PersonaNueva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonaNueva.Designer.cs">
+      <DependentUpon>PersonaNueva.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Telefonos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telefonos.Designer.cs">
+      <DependentUpon>Telefonos.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CambiarTel.resx">
+      <DependentUpon>CambiarTel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CambiosPi.resx">
+      <DependentUpon>CambiosPi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DarBaja.resx">
+      <DependentUpon>DarBaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarTel.resx">
+      <DependentUpon>EliminarTel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EncargadoEx.resx">
+      <DependentUpon>EncargadoEx.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertarAlergia.resx">
+      <DependentUpon>InsertarAlergia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InsertarInf.resx">
       <DependentUpon>InsertarInf.cs</DependentUpon>
@@ -86,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PerInf.resx">
       <DependentUpon>PerInf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonaNueva.resx">
+      <DependentUpon>PersonaNueva.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -97,6 +167,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Telefonos.resx">
+      <DependentUpon>Telefonos.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -144,5 +217,16 @@
   <ItemGroup>
     <None Include="Resources\Imagen de WhatsApp 2023-05-31 a las 19.25.08.png" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Resources\fondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\family.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo-textura-cohete-espacial-artesania-arcilla-plastilina-azul-ninos.jpg" />
+  </ItemGroup>
+  
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

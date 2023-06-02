@@ -83,9 +83,37 @@ namespace FinalBaseDatos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+
         internal static System.Drawing.Bitmap PhotoRoom_20230531_181445 {
             get {
                 object obj = ResourceManager.GetObject("PhotoRoom_20230531_181445", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        internal static System.Drawing.Bitmap family {
+            get {
+                object obj = ResourceManager.GetObject("family", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fondo {
+            get {
+                object obj = ResourceManager.GetObject("fondo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fondo_textura_cohete_espacial_artesania_arcilla_plastilina_azul_ninos {
+            get {
+                object obj = ResourceManager.GetObject("fondo_textura_cohete_espacial_artesania_arcilla_plastilina_azul_ninos", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

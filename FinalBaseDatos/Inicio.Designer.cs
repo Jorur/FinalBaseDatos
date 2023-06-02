@@ -76,7 +76,9 @@
             this.RegistroInfante.Location = new System.Drawing.Point(282, 172);
             this.RegistroInfante.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.RegistroInfante.Name = "RegistroInfante";
-            this.RegistroInfante.Size = new System.Drawing.Size(101, 149);
+
+            this.RegistroInfante.Size = new System.Drawing.Size(135, 183);
+
             this.RegistroInfante.TabIndex = 2;
             this.RegistroInfante.Text = "Admisiones";
             this.RegistroInfante.UseVisualStyleBackColor = false;
@@ -87,10 +89,11 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button1.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(442, 172);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+
+            this.button1.Location = new System.Drawing.Point(585, 212);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 149);
+            this.button1.Size = new System.Drawing.Size(130, 183);
+
             this.button1.TabIndex = 4;
             this.button1.Text = "Consumos";
             this.button1.UseVisualStyleBackColor = false;
@@ -104,7 +107,9 @@
             this.button2.Location = new System.Drawing.Point(592, 172);
             this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 149);
+
+            this.button2.Size = new System.Drawing.Size(130, 183);
+
             this.button2.TabIndex = 5;
             this.button2.Text = "Finanzas";
             this.button2.UseVisualStyleBackColor = false;
@@ -125,10 +130,11 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::FinalBaseDatos.Properties.Resources.treechildrens;
-            this.pictureBox1.Location = new System.Drawing.Point(-2, -2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+
+            this.pictureBox1.Location = new System.Drawing.Point(-3, -2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(272, 408);
+            this.pictureBox1.Size = new System.Drawing.Size(363, 502);
+
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
