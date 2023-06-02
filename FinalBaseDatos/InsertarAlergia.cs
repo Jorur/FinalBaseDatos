@@ -11,12 +11,10 @@ using System.Windows.Forms;
 
 namespace FinalBaseDatos
 {
-    public partial class DarBaja : Form
+    public partial class InsertarAlergia : Form
     {
-        private CambiosPi cambios;
         private Inicio inicio;
-
-        public static SqlConnection ConexionDB()
+        private static SqlConnection ConexionDb()
         {
             string connString = "Data Source = ATHENEA ; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
             SqlConnection conn = new SqlConnection(connString);
@@ -31,50 +29,33 @@ namespace FinalBaseDatos
             }
             return conn;
         }
-
-        public DarBaja()
+        public InsertarAlergia()
         {
             InitializeComponent();
-            inicio = new Inicio();
         }
 
-        private void MatriInf_TextChanged(object sender, EventArgs e)
+        private void Conf_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void DarBaja_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tablaniños_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void volver1_Click(object sender, EventArgs e)
-        {
-            cambios= new CambiosPi();
-            cambios.Show();
-            this.Close();
-        }
-
-        private void conf_Click(object sender, EventArgs e)
-        {
-            SqlConnection conn = ConexionDB();
-            SqlCommand comm = new SqlCommand("DardeBaja", conn);
+            SqlConnection conn = ConexionDb();
+            SqlCommand comm = new SqlCommand("TieneAlergia", conn);
             try
             {
                 comm.CommandType = System.Data.CommandType.StoredProcedure;
-                comm.Parameters.AddWithValue("@NroMatricula", ingresarnm.Text);
+                comm.Parameters.AddWithValue("@NroMatricula", NroMatricula.Text);
+                comm.Parameters.AddWithValue("@ingrediente", Ingrediente.Text);
                 comm.ExecuteNonQuery();
-                MessageBox.Show("Se ha registrado con exito!!!");
+
+                MessageBox.Show("Se ha ingresado la alergia con exito...");
             }
-            catch(Exception ex)
+            catch(Exception error)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(error.Message);
             }
+            comm.Dispose();
+            conn.Close();
+            inicio = new Inicio();
+            inicio.Show();
+            this.Close();
         }
     }
 }

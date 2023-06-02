@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.Nombre = new System.Windows.Forms.Label();
+            this.Nombre = new System.Windows.Forms.TextBox();
+            this.Ci = new System.Windows.Forms.TextBox();
+            this.Dir = new System.Windows.Forms.TextBox();
+            this.Telf = new System.Windows.Forms.TextBox();
+            this.nroMatricula = new System.Windows.Forms.TextBox();
+            this.Parent = new System.Windows.Forms.TextBox();
+            this.Nom = new System.Windows.Forms.Label();
             this.carnet = new System.Windows.Forms.Label();
             this.direccion = new System.Windows.Forms.Label();
             this.Tel = new System.Windows.Forms.Label();
@@ -53,58 +53,58 @@
             this.textBox1.Size = new System.Drawing.Size(112, 22);
             this.textBox1.TabIndex = 0;
             // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(146, 59);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(170, 22);
-            this.textBox2.TabIndex = 1;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(146, 138);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(170, 22);
-            this.textBox3.TabIndex = 2;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(146, 216);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(170, 22);
-            this.textBox4.TabIndex = 3;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(146, 290);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(175, 22);
-            this.textBox5.TabIndex = 4;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(577, 143);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(175, 22);
-            this.textBox6.TabIndex = 5;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(577, 216);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(175, 22);
-            this.textBox7.TabIndex = 6;
-            // 
             // Nombre
             // 
-            this.Nombre.AutoSize = true;
-            this.Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nombre.Location = new System.Drawing.Point(146, 37);
+            this.Nombre.BackColor = System.Drawing.Color.White;
+            this.Nombre.Location = new System.Drawing.Point(146, 59);
             this.Nombre.Name = "Nombre";
-            this.Nombre.Size = new System.Drawing.Size(132, 16);
-            this.Nombre.TabIndex = 7;
-            this.Nombre.Text = "Nombre Completo";
+            this.Nombre.Size = new System.Drawing.Size(170, 22);
+            this.Nombre.TabIndex = 1;
+            // 
+            // Ci
+            // 
+            this.Ci.Location = new System.Drawing.Point(146, 138);
+            this.Ci.Name = "Ci";
+            this.Ci.Size = new System.Drawing.Size(170, 22);
+            this.Ci.TabIndex = 2;
+            // 
+            // Dir
+            // 
+            this.Dir.Location = new System.Drawing.Point(146, 216);
+            this.Dir.Name = "Dir";
+            this.Dir.Size = new System.Drawing.Size(170, 22);
+            this.Dir.TabIndex = 3;
+            // 
+            // Telf
+            // 
+            this.Telf.Location = new System.Drawing.Point(146, 290);
+            this.Telf.Name = "Telf";
+            this.Telf.Size = new System.Drawing.Size(175, 22);
+            this.Telf.TabIndex = 4;
+            // 
+            // nroMatricula
+            // 
+            this.nroMatricula.Location = new System.Drawing.Point(577, 143);
+            this.nroMatricula.Name = "nroMatricula";
+            this.nroMatricula.Size = new System.Drawing.Size(175, 22);
+            this.nroMatricula.TabIndex = 5;
+            // 
+            // Parent
+            // 
+            this.Parent.Location = new System.Drawing.Point(577, 216);
+            this.Parent.Name = "Parent";
+            this.Parent.Size = new System.Drawing.Size(175, 22);
+            this.Parent.TabIndex = 6;
+            // 
+            // Nom
+            // 
+            this.Nom.AutoSize = true;
+            this.Nom.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nom.Location = new System.Drawing.Point(143, 40);
+            this.Nom.Name = "Nom";
+            this.Nom.Size = new System.Drawing.Size(238, 16);
+            this.Nom.TabIndex = 7;
+            this.Nom.Text = "Nombre Completo del Encargado";
             // 
             // carnet
             // 
@@ -152,9 +152,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(577, 195);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 16);
+            this.label2.Size = new System.Drawing.Size(86, 16);
             this.label2.TabIndex = 12;
-            this.label2.Text = "Parentezco";
+            this.label2.Text = "Parentesco";
             // 
             // label3
             // 
@@ -175,6 +175,7 @@
             this.Confirmar.TabIndex = 14;
             this.Confirmar.Text = "Confirmar";
             this.Confirmar.UseVisualStyleBackColor = false;
+            this.Confirmar.Click += new System.EventHandler(this.Confirmar_Click);
             // 
             // volver
             // 
@@ -202,13 +203,13 @@
             this.Controls.Add(this.Tel);
             this.Controls.Add(this.direccion);
             this.Controls.Add(this.carnet);
+            this.Controls.Add(this.Nom);
+            this.Controls.Add(this.Parent);
+            this.Controls.Add(this.nroMatricula);
+            this.Controls.Add(this.Telf);
+            this.Controls.Add(this.Dir);
+            this.Controls.Add(this.Ci);
             this.Controls.Add(this.Nombre);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "PersonaNueva";
@@ -221,13 +222,13 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label Nombre;
+        private System.Windows.Forms.TextBox Nombre;
+        private System.Windows.Forms.TextBox Ci;
+        private System.Windows.Forms.TextBox Dir;
+        private System.Windows.Forms.TextBox Telf;
+        private System.Windows.Forms.TextBox nroMatricula;
+        private System.Windows.Forms.TextBox Parent;
+        private System.Windows.Forms.Label Nom;
         private System.Windows.Forms.Label carnet;
         private System.Windows.Forms.Label direccion;
         private System.Windows.Forms.Label Tel;
