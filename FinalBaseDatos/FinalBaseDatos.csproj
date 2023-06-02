@@ -132,5 +132,17 @@
   <ItemGroup>
     <None Include="Resources\depositphotos_523518512-stock-illustration-thin-line-baby-background-outline.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InsertInf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PhotoRoom_20230531_181124.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PhotoRoom_20230531_181445.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen de WhatsApp 2023-05-31 a las 19.25.08.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
