@@ -75,6 +75,7 @@
             this.conf.TabIndex = 3;
             this.conf.Text = "Confirmar";
             this.conf.UseVisualStyleBackColor = true;
+            this.conf.Click += new System.EventHandler(this.conf_Click);
             // 
             // volver1
             // 
