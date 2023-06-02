@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tablaniños = new System.Windows.Forms.DataGridView();
+            this.tablaInf = new System.Windows.Forms.DataGridView();
             this.ingresarnm = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.conf = new System.Windows.Forms.Button();
             this.volver1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaniños)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaInf)).BeginInit();
             this.SuspendLayout();
             // 
-            // tablaniños
+            // tablaInf
             // 
-            this.tablaniños.BackgroundColor = System.Drawing.Color.LightGray;
-            this.tablaniños.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tablaniños.Location = new System.Drawing.Point(201, 12);
-            this.tablaniños.Name = "tablaniños";
-            this.tablaniños.RowHeadersWidth = 51;
-            this.tablaniños.RowTemplate.Height = 24;
-            this.tablaniños.Size = new System.Drawing.Size(424, 225);
-            this.tablaniños.TabIndex = 0;
-            this.tablaniños.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaniños_CellContentClick);
+            this.tablaInf.BackgroundColor = System.Drawing.Color.LightGray;
+            this.tablaInf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaInf.Location = new System.Drawing.Point(201, 12);
+            this.tablaInf.Name = "tablaInf";
+            this.tablaInf.RowHeadersWidth = 51;
+            this.tablaInf.RowTemplate.Height = 24;
+            this.tablaInf.Size = new System.Drawing.Size(424, 225);
+            this.tablaInf.TabIndex = 0;
+            this.tablaInf.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaniños_CellContentClick);
             // 
             // ingresarnm
             // 
@@ -98,11 +98,11 @@
             this.Controls.Add(this.conf);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ingresarnm);
-            this.Controls.Add(this.tablaniños);
+            this.Controls.Add(this.tablaInf);
             this.Name = "DarBaja";
             this.Text = "DarBaja";
             this.Load += new System.EventHandler(this.DarBaja_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.tablaniños)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaInf)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,7 +110,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView tablaniños;
+        private System.Windows.Forms.DataGridView tablaInf;
         private System.Windows.Forms.TextBox ingresarnm;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button conf;

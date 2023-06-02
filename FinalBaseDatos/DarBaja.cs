@@ -36,6 +36,14 @@ namespace FinalBaseDatos
         {
             InitializeComponent();
             inicio = new Inicio();
+
+            string consulta = "Select NroMatricula as 'Numero de Matricula', Nombre from Infantes";
+            SqlConnection conexion = ConexionDB();
+            SqlDataAdapter adapter = new SqlDataAdapter(consulta, conexion);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            tablaInf.DataSource = dt;
+            conexion.Close();
         }
 
         private void MatriInf_TextChanged(object sender, EventArgs e)
