@@ -45,9 +45,10 @@
             label2.BackColor = System.Drawing.Color.Transparent;
             label2.Font = new System.Drawing.Font("Lucida Calligraphy", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label2.ForeColor = System.Drawing.Color.DeepPink;
-            label2.Location = new System.Drawing.Point(366, 9);
+            label2.Location = new System.Drawing.Point(274, 7);
+            label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(316, 60);
+            label2.Size = new System.Drawing.Size(259, 49);
             label2.TabIndex = 1;
             label2.Text = "ARCO IRIS";
             label2.Click += new System.EventHandler(this.label2_Click);
@@ -58,9 +59,10 @@
             this.Titulo.AutoSize = true;
             this.Titulo.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Titulo.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.Titulo.Location = new System.Drawing.Point(378, 69);
+            this.Titulo.Location = new System.Drawing.Point(284, 56);
+            this.Titulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Titulo.Name = "Titulo";
-            this.Titulo.Size = new System.Drawing.Size(152, 25);
+            this.Titulo.Size = new System.Drawing.Size(120, 21);
             this.Titulo.TabIndex = 0;
             this.Titulo.Text = "Guarderia ";
             this.Titulo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -71,9 +73,12 @@
             this.RegistroInfante.BackColor = System.Drawing.Color.HotPink;
             this.RegistroInfante.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.RegistroInfante.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegistroInfante.Location = new System.Drawing.Point(376, 212);
+            this.RegistroInfante.Location = new System.Drawing.Point(282, 172);
+            this.RegistroInfante.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.RegistroInfante.Name = "RegistroInfante";
+
             this.RegistroInfante.Size = new System.Drawing.Size(135, 183);
+
             this.RegistroInfante.TabIndex = 2;
             this.RegistroInfante.Text = "Admisiones";
             this.RegistroInfante.UseVisualStyleBackColor = false;
@@ -84,9 +89,11 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button1.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
             this.button1.Location = new System.Drawing.Point(585, 212);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(130, 183);
+
             this.button1.TabIndex = 4;
             this.button1.Text = "Consumos";
             this.button1.UseVisualStyleBackColor = false;
@@ -97,9 +104,12 @@
             this.button2.BackColor = System.Drawing.Color.Orange;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button2.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(789, 212);
+            this.button2.Location = new System.Drawing.Point(592, 172);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
+
             this.button2.Size = new System.Drawing.Size(130, 183);
+
             this.button2.TabIndex = 5;
             this.button2.Text = "Finanzas";
             this.button2.UseVisualStyleBackColor = false;
@@ -108,9 +118,10 @@
             // 
             this.Buscar.BackColor = System.Drawing.Color.LightCyan;
             this.Buscar.Font = new System.Drawing.Font("Corbel", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Buscar.Location = new System.Drawing.Point(789, 69);
+            this.Buscar.Location = new System.Drawing.Point(592, 56);
+            this.Buscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Buscar.Name = "Buscar";
-            this.Buscar.Size = new System.Drawing.Size(133, 23);
+            this.Buscar.Size = new System.Drawing.Size(100, 19);
             this.Buscar.TabIndex = 6;
             this.Buscar.Text = "Buscar";
             this.Buscar.UseVisualStyleBackColor = false;
@@ -119,19 +130,21 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::FinalBaseDatos.Properties.Resources.treechildrens;
+
             this.pictureBox1.Location = new System.Drawing.Point(-3, -2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(363, 502);
+
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
             // Inicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
-            this.ClientSize = new System.Drawing.Size(939, 500);
+            this.ClientSize = new System.Drawing.Size(704, 406);
             this.Controls.Add(this.Buscar);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -139,6 +152,7 @@
             this.Controls.Add(this.RegistroInfante);
             this.Controls.Add(label2);
             this.Controls.Add(this.Titulo);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Inicio";
             this.Text = "Guarderia Arco Iris";
             this.Load += new System.EventHandler(this.Form1_Load);

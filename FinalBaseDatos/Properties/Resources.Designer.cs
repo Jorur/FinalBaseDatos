@@ -83,6 +83,14 @@ namespace FinalBaseDatos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+
+        internal static System.Drawing.Bitmap PhotoRoom_20230531_181445 {
+            get {
+                object obj = ResourceManager.GetObject("PhotoRoom_20230531_181445", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
         internal static System.Drawing.Bitmap family {
             get {
                 object obj = ResourceManager.GetObject("family", resourceCulture);
