@@ -67,6 +67,12 @@
     <Compile Include="DarBaja.Designer.cs">
       <DependentUpon>DarBaja.cs</DependentUpon>
     </Compile>
+    <Compile Include="EliminarTel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarTel.Designer.cs">
+      <DependentUpon>EliminarTel.cs</DependentUpon>
+    </Compile>
     <Compile Include="EncargadoEx.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DarBaja.resx">
       <DependentUpon>DarBaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarTel.resx">
+      <DependentUpon>EliminarTel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EncargadoEx.resx">
       <DependentUpon>EncargadoEx.cs</DependentUpon>
