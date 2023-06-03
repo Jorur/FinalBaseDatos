@@ -13,6 +13,8 @@ namespace FinalBaseDatos
     public partial class Finanzas : Form
     {
         private Inicio inicio;
+        private Mensualidad men;
+        private Sueldos su;
         public Finanzas()
         {
             InitializeComponent();
@@ -27,17 +29,22 @@ namespace FinalBaseDatos
 
         private void button2_Click(object sender, EventArgs e)
         {
+            su = new Sueldos();
+            su.Show();
+            this.Close();
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            men = new Mensualidad();
+            men.Show();
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

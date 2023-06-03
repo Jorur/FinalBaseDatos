@@ -15,7 +15,7 @@ namespace FinalBaseDatos
     {
 
         private PerInf admisiones;
-
+        private Finanzas finanaza;
         public Inicio()
         {
             InitializeComponent();
@@ -66,6 +66,13 @@ namespace FinalBaseDatos
         private void button1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            finanaza = new Finanzas();
+            finanaza.Show();
+            this.Hide();
         }
     }
 }

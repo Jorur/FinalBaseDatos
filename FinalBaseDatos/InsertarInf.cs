@@ -86,5 +86,12 @@ namespace FinalBaseDatos
             perinf.Show();
             this.Close();
         }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            perinf = new PerInf();
+            perinf.Show();
+            this.Close();
+        }
     }
 }

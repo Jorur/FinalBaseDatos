@@ -86,7 +86,7 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button1.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(789, 212);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(173, 225);
             this.button1.TabIndex = 4;
@@ -106,6 +106,7 @@
             this.button2.TabIndex = 5;
             this.button2.Text = "Finanzas";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // Buscar
             // 
@@ -124,7 +125,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::FinalBaseDatos.Properties.Resources.treechildrens;
             this.pictureBox1.Location = new System.Drawing.Point(-4, 1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(382, 615);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
