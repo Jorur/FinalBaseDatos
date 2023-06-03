@@ -79,6 +79,12 @@
     <Compile Include="EncargadoEx.Designer.cs">
       <DependentUpon>EncargadoEx.cs</DependentUpon>
     </Compile>
+    <Compile Include="Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factura.Designer.cs">
+      <DependentUpon>Factura.cs</DependentUpon>
+    </Compile>
     <Compile Include="Finanzas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EncargadoEx.resx">
       <DependentUpon>EncargadoEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factura.resx">
+      <DependentUpon>Factura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Finanzas.resx">
       <DependentUpon>Finanzas.cs</DependentUpon>

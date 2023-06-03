@@ -37,13 +37,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.Volver = new System.Windows.Forms.Button();
             this.pagar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
             this.menus = new System.Windows.Forms.Button();
             this.servicios = new System.Windows.Forms.Button();
             this.Tienda = new System.Windows.Forms.Button();
             this.go = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Datos = new System.Windows.Forms.DataGridView();
+            this.Total = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.Datos)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -136,25 +136,7 @@
             this.pagar.TabIndex = 8;
             this.pagar.Text = "Pagar";
             this.pagar.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(319, 395);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(129, 33);
-            this.dataGridView1.TabIndex = 9;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(466, 405);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 16);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Total";
+            this.pagar.Click += new System.EventHandler(this.pagar_Click);
             // 
             // menus
             // 
@@ -167,6 +149,7 @@
             this.menus.TabIndex = 11;
             this.menus.Text = "Menus";
             this.menus.UseVisualStyleBackColor = false;
+            this.menus.Click += new System.EventHandler(this.menus_Click);
             // 
             // servicios
             // 
@@ -179,6 +162,7 @@
             this.servicios.TabIndex = 12;
             this.servicios.Text = "Servicios Ad";
             this.servicios.UseVisualStyleBackColor = false;
+            this.servicios.Click += new System.EventHandler(this.servicios_Click);
             // 
             // Tienda
             // 
@@ -191,6 +175,7 @@
             this.Tienda.TabIndex = 13;
             this.Tienda.Text = "Tienda";
             this.Tienda.UseVisualStyleBackColor = false;
+            this.Tienda.Click += new System.EventHandler(this.Tienda_Click);
             // 
             // go
             // 
@@ -202,18 +187,38 @@
             this.go.Text = "Buscar";
             this.go.UseVisualStyleBackColor = true;
             // 
+            // Datos
+            // 
+            this.Datos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Datos.Location = new System.Drawing.Point(177, 136);
+            this.Datos.Name = "Datos";
+            this.Datos.RowHeadersWidth = 51;
+            this.Datos.RowTemplate.Height = 24;
+            this.Datos.Size = new System.Drawing.Size(449, 192);
+            this.Datos.TabIndex = 15;
+            // 
+            // Total
+            // 
+            this.Total.AutoSize = true;
+            this.Total.Location = new System.Drawing.Point(174, 408);
+            this.Total.Name = "Total";
+            this.Total.Size = new System.Drawing.Size(44, 16);
+            this.Total.TabIndex = 16;
+            this.Total.Text = "label6";
+            this.Total.Click += new System.EventHandler(this.Total_Click);
+            // 
             // Mensualidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Total);
+            this.Controls.Add(this.Datos);
             this.Controls.Add(this.go);
             this.Controls.Add(this.Tienda);
             this.Controls.Add(this.servicios);
             this.Controls.Add(this.menus);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pagar);
             this.Controls.Add(this.Volver);
             this.Controls.Add(this.label4);
@@ -225,7 +230,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Mensualidad";
             this.Text = "Mensualidad";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Datos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,11 +247,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button Volver;
         private System.Windows.Forms.Button pagar;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button menus;
         private System.Windows.Forms.Button servicios;
         private System.Windows.Forms.Button Tienda;
         private System.Windows.Forms.Button go;
+        private System.Windows.Forms.DataGridView Datos;
+        private System.Windows.Forms.Label Total;
     }
 }
