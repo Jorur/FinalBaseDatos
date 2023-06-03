@@ -34,8 +34,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.año = new System.Windows.Forms.TextBox();
             this.mes = new System.Windows.Forms.TextBox();
-            this.infante = new System.Windows.Forms.TextBox();
+            this.encargado = new System.Windows.Forms.TextBox();
             this.busca = new System.Windows.Forms.Button();
+            this.Datos = new System.Windows.Forms.DataGridView();
+            this.Total = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.Datos)).BeginInit();
             this.SuspendLayout();
             // 
             // Volver
@@ -100,13 +103,13 @@
             this.mes.Size = new System.Drawing.Size(100, 22);
             this.mes.TabIndex = 8;
             // 
-            // infante
+            // encargado
             // 
-            this.infante.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.infante.Location = new System.Drawing.Point(158, 107);
-            this.infante.Name = "infante";
-            this.infante.Size = new System.Drawing.Size(100, 22);
-            this.infante.TabIndex = 7;
+            this.encargado.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.encargado.Location = new System.Drawing.Point(158, 107);
+            this.encargado.Name = "encargado";
+            this.encargado.Size = new System.Drawing.Size(100, 22);
+            this.encargado.TabIndex = 7;
             // 
             // busca
             // 
@@ -117,6 +120,29 @@
             this.busca.TabIndex = 13;
             this.busca.Text = "Buscar";
             this.busca.UseVisualStyleBackColor = false;
+            this.busca.Click += new System.EventHandler(this.busca_Click);
+            // 
+            // Datos
+            // 
+            this.Datos.AllowUserToAddRows = false;
+            this.Datos.AllowUserToDeleteRows = false;
+            this.Datos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Datos.Location = new System.Drawing.Point(158, 159);
+            this.Datos.Name = "Datos";
+            this.Datos.ReadOnly = true;
+            this.Datos.RowHeadersWidth = 51;
+            this.Datos.RowTemplate.Height = 24;
+            this.Datos.Size = new System.Drawing.Size(449, 195);
+            this.Datos.TabIndex = 14;
+            // 
+            // Total
+            // 
+            this.Total.AutoSize = true;
+            this.Total.Location = new System.Drawing.Point(158, 407);
+            this.Total.Name = "Total";
+            this.Total.Size = new System.Drawing.Size(44, 16);
+            this.Total.TabIndex = 15;
+            this.Total.Text = "label1";
             // 
             // Sueldos
             // 
@@ -124,16 +150,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Total);
+            this.Controls.Add(this.Datos);
             this.Controls.Add(this.busca);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.año);
             this.Controls.Add(this.mes);
-            this.Controls.Add(this.infante);
+            this.Controls.Add(this.encargado);
             this.Controls.Add(this.Volver);
             this.Name = "Sueldos";
             this.Text = "Sueldos";
+            ((System.ComponentModel.ISupportInitialize)(this.Datos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,7 +176,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox año;
         private System.Windows.Forms.TextBox mes;
-        private System.Windows.Forms.TextBox infante;
+        private System.Windows.Forms.TextBox encargado;
         private System.Windows.Forms.Button busca;
+        private System.Windows.Forms.DataGridView Datos;
+        private System.Windows.Forms.Label Total;
     }
 }
