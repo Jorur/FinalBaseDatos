@@ -41,7 +41,7 @@
             this.label1.AutoSize = true;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 85);
+            this.label1.Location = new System.Drawing.Point(108, 74);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(242, 18);
             this.label1.TabIndex = 0;
@@ -49,7 +49,7 @@
             // 
             // Ingrediente
             // 
-            this.Ingrediente.Location = new System.Drawing.Point(258, 85);
+            this.Ingrediente.Location = new System.Drawing.Point(130, 104);
             this.Ingrediente.Name = "Ingrediente";
             this.Ingrediente.Size = new System.Drawing.Size(192, 22);
             this.Ingrediente.TabIndex = 1;
@@ -59,7 +59,7 @@
             this.Nro.AutoSize = true;
             this.Nro.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Nro.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nro.Location = new System.Drawing.Point(15, 161);
+            this.Nro.Location = new System.Drawing.Point(108, 171);
             this.Nro.Name = "Nro";
             this.Nro.Size = new System.Drawing.Size(228, 18);
             this.Nro.TabIndex = 2;
@@ -67,7 +67,7 @@
             // 
             // NroMatricula
             // 
-            this.NroMatricula.Location = new System.Drawing.Point(258, 158);
+            this.NroMatricula.Location = new System.Drawing.Point(130, 204);
             this.NroMatricula.Name = "NroMatricula";
             this.NroMatricula.Size = new System.Drawing.Size(192, 22);
             this.NroMatricula.TabIndex = 3;
@@ -76,9 +76,9 @@
             // 
             this.Conf.BackColor = System.Drawing.Color.DarkOrange;
             this.Conf.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Conf.Location = new System.Drawing.Point(121, 243);
+            this.Conf.Location = new System.Drawing.Point(130, 278);
             this.Conf.Name = "Conf";
-            this.Conf.Size = new System.Drawing.Size(201, 47);
+            this.Conf.Size = new System.Drawing.Size(206, 62);
             this.Conf.TabIndex = 4;
             this.Conf.Text = "Confirmar Alergia";
             this.Conf.UseVisualStyleBackColor = false;
