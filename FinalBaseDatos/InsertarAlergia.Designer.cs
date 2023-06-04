@@ -50,10 +50,6 @@ namespace FinalBaseDatos
             this.label1.TabIndex = 0;
             this.label1.Text = "Ingrediente al que le tiene alergia";
             // 
-            // Ingrediente
-            // 
-            // 
-            //
             // Nro
             // 
             this.Nro.AutoSize = true;
@@ -95,6 +91,7 @@ namespace FinalBaseDatos
             // 
             // cmbingre
             // 
+            this.cmbingre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbingre.FormattingEnabled = true;
             this.cmbingre.Items.AddRange(new object[] {
             "Pollo",
