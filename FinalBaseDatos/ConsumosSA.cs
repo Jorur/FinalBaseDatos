@@ -51,20 +51,28 @@ namespace FinalBaseDatos
         {
             SqlConnection conn = ConexionDB();
             SqlCommand comm = new SqlCommand("InsertarConsumoServicio", conn);
-            try
+            if(NroMatricula.Text != "" && CodServ.Text != "" && Descripcion.Text != "")
             {
-                comm.CommandType = System.Data.CommandType.StoredProcedure;
-                comm.Parameters.AddWithValue("@nromatricula", NroMatricula.Text);
-                comm.Parameters.AddWithValue("@codserv", CodServ.Text);
-                comm.Parameters.AddWithValue("@descripcion", Descripcion.Text);
-                comm.ExecuteNonQuery();
+                try
+                {
+                    comm.CommandType = System.Data.CommandType.StoredProcedure;
+                    comm.Parameters.AddWithValue("@nromatricula", NroMatricula.Text);
+                    comm.Parameters.AddWithValue("@codserv", CodServ.Text);
+                    comm.Parameters.AddWithValue("@descripcion", Descripcion.Text);
+                    comm.ExecuteNonQuery();
 
-                MessageBox.Show("Se ha ingresado el consumo con exito...");
+                    MessageBox.Show("Se ha ingresado el consumo con exito...");
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show(error.Message);
+                }
             }
-            catch (Exception error)
+            else
             {
-                MessageBox.Show(error.Message);
+                MessageBox.Show("Ingrese los datos...");
             }
+
             comm.Dispose();
             conn.Close();
             consumos = new Consumos();

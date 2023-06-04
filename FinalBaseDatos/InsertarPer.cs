@@ -26,7 +26,7 @@ namespace FinalBaseDatos
             try
             {
                 conn.Open();
-                MessageBox.Show("Conexion con la base de datos exitosa");
+                //MessageBox.Show("Conexion con la base de datos exitosa");
             }
             catch (Exception e)
             {
@@ -51,28 +51,36 @@ namespace FinalBaseDatos
             //Procedimiento de Insertar Persona
             SqlConnection conexion = ConexionDB();
             SqlCommand comm = new SqlCommand("RegInf", conexion);
-            try 
+            if(Ci.Text != "" && NombreEncargado.Text != "" && Direccion.Text != "" && Parentesco.Text != "" && Celular.Text != "" && CuentaBco.Text != "" && Banco.Text != "")
             {
-                comm.CommandType = System.Data.CommandType.StoredProcedure;
-                comm.Parameters.AddWithValue("@infnt", inf.Nombre);
-                comm.Parameters.AddWithValue("@nacimiento", inf.FechaNacimiento);
-                comm.Parameters.AddWithValue("@alta", inf.FechaAlta);
-                comm.Parameters.AddWithValue("@tarifa", inf.TarifaMes);
-                comm.Parameters.AddWithValue("@ciP", Ci.Text);
-                comm.Parameters.AddWithValue("@persona", NombreEncargado.Text);
-                comm.Parameters.AddWithValue("@dir", Direccion.Text);
-                comm.Parameters.AddWithValue("@parent", Parentesco.Text);
-                comm.Parameters.AddWithValue("@tel", Celular.Text);
-                comm.Parameters.AddWithValue("@nroCuent", CuentaBco.Text);
-                comm.Parameters.AddWithValue("@banc", Banco.Text);
-                comm.ExecuteNonQuery();
-                MessageBox.Show("Se ha registrado con exito!!!");
+                try
+                {
+                    comm.CommandType = System.Data.CommandType.StoredProcedure;
+                    comm.Parameters.AddWithValue("@infnt", inf.Nombre);
+                    comm.Parameters.AddWithValue("@nacimiento", inf.FechaNacimiento);
+                    comm.Parameters.AddWithValue("@alta", inf.FechaAlta);
+                    comm.Parameters.AddWithValue("@tarifa", inf.TarifaMes);
+                    comm.Parameters.AddWithValue("@ciP", Ci.Text);
+                    comm.Parameters.AddWithValue("@persona", NombreEncargado.Text);
+                    comm.Parameters.AddWithValue("@dir", Direccion.Text);
+                    comm.Parameters.AddWithValue("@parent", Parentesco.Text);
+                    comm.Parameters.AddWithValue("@tel", Celular.Text);
+                    comm.Parameters.AddWithValue("@nroCuent", CuentaBco.Text);
+                    comm.Parameters.AddWithValue("@banc", Banco.Text);
+                    comm.ExecuteNonQuery();
+                    MessageBox.Show("Se ha registrado con exito!!!");
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show("Hubo un error al ingresar los datos... Por favor verificar");
+                    //MessageBox.Show(error.Message);
+                }
             }
-            catch(Exception error)
+            else
             {
-                MessageBox.Show("Hubo un error al ingresar los datos... Por favor verificar");
-                //MessageBox.Show(error.Message);
+                MessageBox.Show("Ingrese los datos...");
             }
+
             inicio.Show();
             comm.Dispose();
             conexion.Close();

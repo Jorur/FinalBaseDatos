@@ -18,8 +18,8 @@ namespace FinalBaseDatos
         private TodaBaja bajas;
         private static SqlConnection ConexionDb()
         {
-            //string connString = "Data Source = ATHENEA ; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
-            string connString = "Data Source = EMILIANA\\MSSQLSERVER01 ; Initial Catalog = GuarderiaFinal; User ID = emifinal; Password = Passw0rd";
+            string connString = "Data Source = ATHENEA ; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
+            //string connString = "Data Source = EMILIANA\\MSSQLSERVER01 ; Initial Catalog = GuarderiaFinal; User ID = emifinal; Password = Passw0rd";
             SqlConnection conn = new SqlConnection(connString);
             try
             {
@@ -46,39 +46,45 @@ namespace FinalBaseDatos
 
         private void busca_Click(object sender, EventArgs e)
         {
-            
             try
             {
-                if (radioNiño.Checked)
+                if(Dato.Text != "")
                 {
-                    SqlConnection conexion = ConexionDb();
-                    SqlCommand comm = new SqlCommand("DatosGenerales", conexion);
-                    comm.CommandType = System.Data.CommandType.StoredProcedure;
-                    comm.Parameters.AddWithValue("@nombre", textBox1.Text);
+                    if (radioNiño.Checked)
+                    {
+                        SqlConnection conexion = ConexionDb();
+                        SqlCommand comm = new SqlCommand("DatosGenerales", conexion);
+                        comm.CommandType = System.Data.CommandType.StoredProcedure;
+                        comm.Parameters.AddWithValue("@nombre", Dato.Text);
 
-                    SqlDataAdapter adapter = new SqlDataAdapter(comm);
-                    DataTable dt = new DataTable();
-                    adapter.Fill(dt);
-                    datosGenerales.DataSource = dt;
+                        SqlDataAdapter adapter = new SqlDataAdapter(comm);
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+                        datosGenerales.DataSource = dt;
 
-                    comm.Dispose();
-                    comm.Parameters.Clear();
+                        comm.Dispose();
+                        comm.Parameters.Clear();
+                    }
+
+                    if (radioAdulto.Checked)
+                    {
+                        SqlConnection conexion = ConexionDb();
+                        SqlCommand comm = new SqlCommand("DatosGenerales2", conexion);
+                        comm.CommandType = System.Data.CommandType.StoredProcedure;
+                        comm.Parameters.AddWithValue("@CI", Dato.Text);
+
+                        SqlDataAdapter adapter = new SqlDataAdapter(comm);
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+                        datosGenerales.DataSource = dt;
+
+                        comm.Dispose();
+                        comm.Parameters.Clear();
+                    }
                 }
-
-                if (radioAdulto.Checked)
+                else
                 {
-                    SqlConnection conexion = ConexionDb();
-                    SqlCommand comm = new SqlCommand("DatosGenerales2", conexion);
-                    comm.CommandType = System.Data.CommandType.StoredProcedure;
-                    comm.Parameters.AddWithValue("@CI", textBox1.Text);
-
-                    SqlDataAdapter adapter = new SqlDataAdapter(comm);
-                    DataTable dt = new DataTable();
-                    adapter.Fill(dt);
-                    datosGenerales.DataSource = dt;
-
-                    comm.Dispose();
-                    comm.Parameters.Clear();
+                    MessageBox.Show("Ingrese los datos por favor...");
                 }
 
             }
@@ -90,14 +96,31 @@ namespace FinalBaseDatos
 
         private void Alergias_Click(object sender, EventArgs e)
         {
-            tabla = new TablasAR(matricula.Text,"alergia");
-            tabla.Show();
+            if(matricula.Text != "")
+            {
+                tabla = new TablasAR(matricula.Text, "alergia");
+                tabla.Show();
+            }
+            else 
+            {
+                MessageBox.Show("Ingrese la matricula por favor...");
+            }
+
         }
 
         private void Responsables_Click(object sender, EventArgs e)
         {
-            tabla = new TablasAR(matricula.Text, "responsable");
-            tabla.Show();
+            if (matricula.Text != "")
+            {
+                tabla = new TablasAR(matricula.Text, "responsable");
+                tabla.Show();
+            }
+
+            else
+            {
+                MessageBox.Show("Ingrese la matricula por favor...");
+            }
+
         }
 
         private void Bajas_Click(object sender, EventArgs e)
