@@ -13,11 +13,28 @@ namespace FinalBaseDatos
 {
     public partial class Factura : Form
     {
-        public Factura(SqlParameter valor)
+        public Factura(SqlParameter valor, SqlParameter menu, SqlParameter servicio, SqlParameter tienda, string month, string year)
         {
+            string date = DateTime.Now.ToString("yyyy-MM-dd");
             InitializeComponent();
-            Total.Text = $"El total pagado es de: {valor.Value}";
+            fech.Text = date;
+            año.Text = year;
+            Mes.Text = month;
+            men.Text = $"{menu.Value}";
+            Servicio.Text = $"{servicio.Value}";
+            Articulo.Text = $"{tienda.Value}";
+            Total.Text = $"{valor.Value}";
+
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Factura_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

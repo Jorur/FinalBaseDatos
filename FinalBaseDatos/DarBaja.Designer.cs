@@ -38,13 +38,13 @@
             // 
             // tablaInf
             // 
-            this.tablaInf.BackgroundColor = System.Drawing.Color.LightGray;
+            this.tablaInf.BackgroundColor = System.Drawing.Color.RosyBrown;
             this.tablaInf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tablaInf.Location = new System.Drawing.Point(201, 12);
+            this.tablaInf.Location = new System.Drawing.Point(221, 12);
             this.tablaInf.Name = "tablaInf";
             this.tablaInf.RowHeadersWidth = 51;
             this.tablaInf.RowTemplate.Height = 24;
-            this.tablaInf.Size = new System.Drawing.Size(424, 225);
+            this.tablaInf.Size = new System.Drawing.Size(341, 225);
             this.tablaInf.TabIndex = 0;
             this.tablaInf.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tablaniños_CellContentClick);
             // 

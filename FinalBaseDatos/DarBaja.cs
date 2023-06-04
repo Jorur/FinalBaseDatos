@@ -19,6 +19,7 @@ namespace FinalBaseDatos
         public static SqlConnection ConexionDB()
         {
             string connString = "Data Source = ATHENEA ; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
+            //string connString = "Data Source = EMILIANA\\MSSQLSERVER01 ; Initial Catalog = GuarderiaFinal; User ID = emifinal; Password = Passw0rd";
             SqlConnection conn = new SqlConnection(connString);
             try
             {
@@ -58,6 +59,12 @@ namespace FinalBaseDatos
 
         private void tablaniños_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+           /* SqlConnection conexion = ConexionDB();
+            SqlCommand comm = new SqlCommand("select nromatricula , nombre from Infantes order by Nombre", conexion);
+            SqlDataAdapter adapter = new SqlDataAdapter(comm);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            */
 
         }
 

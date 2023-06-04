@@ -17,7 +17,11 @@ namespace FinalBaseDatos
         private PerInf volviendo;
         private static SqlConnection ConexionDb()
         {
-            string connString = "Data Source = Fabian ; Initial Catalog = GuarderiaFinal; User ID = Fabiaan; Password = Password";
+
+            //string connString = "Data Source = Fabian ; Initial Catalog = GuarderiaFinal; User ID = Fabiaan; Password = Password";
+            string connString = "Data Source = ATHENEA ; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
+            //string connString = "Data Source = EMILIANA\\MSSQLSERVER01 ; Initial Catalog = GuarderiaFinal; User ID = emifinal; Password = Passw0rd";
+
             SqlConnection conn = new SqlConnection(connString);
             try
             {
@@ -33,6 +37,15 @@ namespace FinalBaseDatos
         public InsertarAlergia()
         {
             InitializeComponent();
+            //para la tabla
+            SqlConnection conexion = ConexionDb();
+            SqlCommand comm = new SqlCommand("select nromatricula , nombre from Infantes order by Nombre", conexion);
+            SqlDataAdapter adapter = new SqlDataAdapter(comm);
+            DataTable dt = new DataTable();
+            dataGridInfantes.DataSource = dt;
+            adapter.Fill(dt);
+
+            conexion.Close();
         }
 
         private void Conf_Click(object sender, EventArgs e)
@@ -43,7 +56,7 @@ namespace FinalBaseDatos
             {
                 comm.CommandType = System.Data.CommandType.StoredProcedure;
                 comm.Parameters.AddWithValue("@NroMatricula", NroMatricula.Text);
-                comm.Parameters.AddWithValue("@ingrediente", Ingrediente.Text);
+                comm.Parameters.AddWithValue("@ingrediente", cmbingre.Text);
                 comm.ExecuteNonQuery();
 
                 MessageBox.Show("Se ha ingresado la alergia con exito...");
@@ -64,6 +77,16 @@ namespace FinalBaseDatos
             volviendo = new PerInf();
             volviendo.Show();
             this.Close ();
+        }
+
+        private void Ingrediente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridInfantes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
         }
     }
 }

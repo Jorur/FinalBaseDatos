@@ -19,11 +19,13 @@ namespace FinalBaseDatos
         public static SqlConnection ConexionDB()
         {
             string connString = "Data Source = ATHENEA ; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
+
+            //string connString = "Data Source = EMILIANA\\MSSQLSERVER01 ; Initial Catalog = GuarderiaFinal; User ID = emifinal; Password = Passw0rd";
             SqlConnection conn = new SqlConnection(connString);
             try
             {
                 conn.Open();
-                //MessageBox.Show("Conexion con la base de datos exitosa");
+                MessageBox.Show("Conexion con la base de datos exitosa");
             }
             catch (Exception e)
             {

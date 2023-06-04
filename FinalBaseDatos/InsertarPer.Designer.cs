@@ -163,15 +163,15 @@
             this.EtiquetaBco.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EtiquetaBco.Location = new System.Drawing.Point(456, 24);
             this.EtiquetaBco.Name = "EtiquetaBco";
-            this.EtiquetaBco.Size = new System.Drawing.Size(121, 16);
+            this.EtiquetaBco.Size = new System.Drawing.Size(169, 16);
             this.EtiquetaBco.TabIndex = 12;
-            this.EtiquetaBco.Text = "Cuenta Bancaria";
+            this.EtiquetaBco.Text = "Cuenta Bancaria [6 dig]";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(456, 96);
+            this.label5.Location = new System.Drawing.Point(456, 111);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 16);
             this.label5.TabIndex = 13;
@@ -189,7 +189,7 @@
             // 
             this.Registrado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.Registrado.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Registrado.Location = new System.Drawing.Point(13, 355);
+            this.Registrado.Location = new System.Drawing.Point(12, 253);
             this.Registrado.Name = "Registrado";
             this.Registrado.Size = new System.Drawing.Size(150, 82);
             this.Registrado.TabIndex = 15;

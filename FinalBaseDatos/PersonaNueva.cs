@@ -14,9 +14,11 @@ namespace FinalBaseDatos
     public partial class PersonaNueva : Form
     {
         private Inicio inicio;
+        private Tablainfantes tablainfantes;
         public static SqlConnection ConexionDB()
         {
             string connString = "Data Source = ATHENEA ; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
+            //string connString = "Data Source = EMILIANA\\MSSQLSERVER01 ; Initial Catalog = GuarderiaFinal; User ID = emifinal; Password = Passw0rd";
             SqlConnection conn = new SqlConnection(connString);
             try
             {
@@ -90,6 +92,12 @@ namespace FinalBaseDatos
             conexion.Close();
             inicio.Show();
             this.Close();
+        }
+
+        private void Vertabla_Click(object sender, EventArgs e)
+        {
+            tablainfantes = new Tablainfantes();
+            tablainfantes.Show();
         }
     }
 }

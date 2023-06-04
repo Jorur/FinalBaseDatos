@@ -33,20 +33,23 @@
             this.Aceptar = new System.Windows.Forms.Button();
             this.Relacion = new System.Windows.Forms.Label();
             this.Parentesco = new System.Windows.Forms.TextBox();
+            this.volver = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(232, 101);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(253, 119);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 16);
+            this.label1.Size = new System.Drawing.Size(154, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Carnet de Identidad";
             // 
             // Ci
             // 
-            this.Ci.Location = new System.Drawing.Point(235, 121);
+            this.Ci.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(202)))), ((int)(((byte)(225)))));
+            this.Ci.Location = new System.Drawing.Point(257, 142);
             this.Ci.Name = "Ci";
             this.Ci.Size = new System.Drawing.Size(246, 22);
             this.Ci.TabIndex = 1;
@@ -54,35 +57,51 @@
             // 
             // Aceptar
             // 
-            this.Aceptar.Location = new System.Drawing.Point(643, 399);
+            this.Aceptar.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Aceptar.Font = new System.Drawing.Font("Corbel", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aceptar.Location = new System.Drawing.Point(312, 303);
             this.Aceptar.Name = "Aceptar";
-            this.Aceptar.Size = new System.Drawing.Size(107, 23);
+            this.Aceptar.Size = new System.Drawing.Size(140, 71);
             this.Aceptar.TabIndex = 2;
             this.Aceptar.Text = "Aceptar";
-            this.Aceptar.UseVisualStyleBackColor = true;
+            this.Aceptar.UseVisualStyleBackColor = false;
             this.Aceptar.Click += new System.EventHandler(this.Aceptar_Click);
             // 
             // Relacion
             // 
             this.Relacion.AutoSize = true;
-            this.Relacion.Location = new System.Drawing.Point(232, 194);
+            this.Relacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Relacion.Location = new System.Drawing.Point(253, 212);
             this.Relacion.Name = "Relacion";
-            this.Relacion.Size = new System.Drawing.Size(61, 16);
+            this.Relacion.Size = new System.Drawing.Size(199, 20);
             this.Relacion.TabIndex = 3;
-            this.Relacion.Text = "Relacion";
+            this.Relacion.Text = "Parentezco con el infante";
             // 
             // Parentesco
             // 
-            this.Parentesco.Location = new System.Drawing.Point(235, 214);
+            this.Parentesco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(202)))), ((int)(((byte)(225)))));
+            this.Parentesco.Location = new System.Drawing.Point(257, 235);
             this.Parentesco.Name = "Parentesco";
             this.Parentesco.Size = new System.Drawing.Size(246, 22);
             this.Parentesco.TabIndex = 4;
+            // 
+            // volver
+            // 
+            this.volver.Location = new System.Drawing.Point(12, 415);
+            this.volver.Name = "volver";
+            this.volver.Size = new System.Drawing.Size(108, 23);
+            this.volver.TabIndex = 5;
+            this.volver.Text = "Volver";
+            this.volver.UseVisualStyleBackColor = true;
+            this.volver.Click += new System.EventHandler(this.volver_Click);
             // 
             // EncargadoEx
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(202)))), ((int)(((byte)(225)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.volver);
             this.Controls.Add(this.Parentesco);
             this.Controls.Add(this.Relacion);
             this.Controls.Add(this.Aceptar);
@@ -103,5 +122,6 @@
         private System.Windows.Forms.Button Aceptar;
         private System.Windows.Forms.Label Relacion;
         private System.Windows.Forms.TextBox Parentesco;
+        private System.Windows.Forms.Button volver;
     }
 }
