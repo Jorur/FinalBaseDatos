@@ -47,20 +47,27 @@ namespace FinalBaseDatos
         {
             SqlConnection conexion = ConexionDB();
             SqlCommand comm = new SqlCommand("ReponerStock", conexion);
-
-            try
+            if(CodArt.Text != "" && Cantidad.Text != "")
             {
-                comm.CommandType = System.Data.CommandType.StoredProcedure;
-                comm.Parameters.AddWithValue("@codigoArt", CodArt.Text);
-                comm.Parameters.AddWithValue("@stock", Cantidad.Text);
-                comm.ExecuteNonQuery();
+                try
+                {
+                    comm.CommandType = System.Data.CommandType.StoredProcedure;
+                    comm.Parameters.AddWithValue("@codigoArt", CodArt.Text);
+                    comm.Parameters.AddWithValue("@stock", Cantidad.Text);
+                    comm.ExecuteNonQuery();
 
-                MessageBox.Show("Se ha registrado correctamente...");
+                    MessageBox.Show("Se ha registrado correctamente...");
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show(error.Message);
+                }
             }
-            catch(Exception error)
+            else
             {
-                MessageBox.Show(error.Message);
+                MessageBox.Show("Ingrese los datos por favor...");
             }
+            
             comm.Dispose();
             conexion.Close();
             CodArt.Clear();

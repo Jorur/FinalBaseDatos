@@ -79,17 +79,26 @@ namespace FinalBaseDatos
         {
             SqlConnection conn = ConexionDB();
             SqlCommand comm = new SqlCommand("DardeBaja", conn);
-            try
+            if(ingresarnm.Text != "")
             {
-                comm.CommandType = System.Data.CommandType.StoredProcedure;
-                comm.Parameters.AddWithValue("@NroMatricula", ingresarnm.Text);
-                comm.ExecuteNonQuery();
-                MessageBox.Show("Se ha registrado con exito!!!");
+                try
+                {
+                    comm.CommandType = System.Data.CommandType.StoredProcedure;
+                    comm.Parameters.AddWithValue("@NroMatricula", ingresarnm.Text);
+                    comm.ExecuteNonQuery();
+                    MessageBox.Show("Se ha registrado con exito!!!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch(Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ingrese los datos por favor...");
             }
+            comm.Dispose();
+            conn.Close();
         }
     }
 }

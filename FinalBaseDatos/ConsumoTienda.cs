@@ -47,34 +47,42 @@ namespace FinalBaseDatos
         {
             SqlConnection conn = ConexionDB();
             SqlCommand comm = new SqlCommand("InsertarConsumosTienda", conn);
-            try
+            if(NroMatricula.Text != "" && IdArticulo.Text != "" && Cantidad.Text != "")
             {
-                comm.CommandType = System.Data.CommandType.StoredProcedure;
-                SqlParameter resultado = new SqlParameter("@resultado", System.Data.SqlDbType.VarChar, 50);
-                resultado.Direction = System.Data.ParameterDirection.Output;
-                comm.Parameters.Add(resultado);
-                comm.Parameters.AddWithValue("@NroMatricula", NroMatricula.Text);
-                comm.Parameters.AddWithValue("@IdArticulo", IdArticulo.Text);
-                comm.Parameters.AddWithValue("@cantidad", Cantidad.Text);
-                comm.ExecuteNonQuery(); 
-                string alerta = resultado.Value.ToString();
-                if (alerta == "true")
+                try
                 {
-                    MessageBox.Show("Alerta de minimo de Stock...");
+                    comm.CommandType = System.Data.CommandType.StoredProcedure;
+                    SqlParameter resultado = new SqlParameter("@resultado", System.Data.SqlDbType.VarChar, 50);
+                    resultado.Direction = System.Data.ParameterDirection.Output;
+                    comm.Parameters.Add(resultado);
+                    comm.Parameters.AddWithValue("@NroMatricula", NroMatricula.Text);
+                    comm.Parameters.AddWithValue("@IdArticulo", IdArticulo.Text);
+                    comm.Parameters.AddWithValue("@cantidad", Cantidad.Text);
+                    comm.ExecuteNonQuery();
+                    string alerta = resultado.Value.ToString();
+                    if (alerta == "true")
+                    {
+                        MessageBox.Show("Alerta de minimo de Stock...");
+                    }
+                    else if (alerta == "false")
+                    {
+                        MessageBox.Show("Se ha ingresado el consumo con exito...");
+                    }
+                    else if (alerta == "ns")
+                    {
+                        MessageBox.Show("Sin Stock suficiente...");
+                    }
                 }
-                else if (alerta == "false")
+                catch (Exception error)
                 {
-                    MessageBox.Show("Se ha ingresado el consumo con exito...");
-                }
-                else if (alerta == "ns")
-                {
-                    MessageBox.Show("Sin Stock suficiente...");
+                    MessageBox.Show(error.Message);
                 }
             }
-            catch (Exception error)
+            else
             {
-                MessageBox.Show(error.Message);
+                MessageBox.Show("Ingrese los datos...");
             }
+ 
             comm.Dispose();
             conn.Close();
             consumos = new Consumos();

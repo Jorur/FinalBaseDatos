@@ -65,11 +65,19 @@ namespace FinalBaseDatos
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Infante inf;
-            inf = new Infante(NombreInf.Text, FechaNacimiento.Text, FechaIngreso.Text, float.Parse(Tarifa.Text));
-            persona = new InsertarPer(inf);
-            persona.Show();
-            this.Hide();
+            if(NombreInf.Text != "" && FechaNacimiento.Text != "" && FechaIngreso.Text != "" && Tarifa.Text != "")
+            {
+                Infante inf;
+                inf = new Infante(NombreInf.Text, FechaNacimiento.Text, FechaIngreso.Text, float.Parse(Tarifa.Text));
+                persona = new InsertarPer(inf);
+                persona.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Ingrese los datos por favor....");
+            }
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

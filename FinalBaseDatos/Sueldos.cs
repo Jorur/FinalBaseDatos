@@ -48,85 +48,92 @@ namespace FinalBaseDatos
             SqlConnection conexion = ConexionDb();
             SqlCommand comm = new SqlCommand("ReporteSueldos", conexion);
             int numeroMes;
-            try
+            if(cmbMes.Text != "" && cmbEncargados.Text != "" && año.Text != "" )
             {
-                //cambiendo de char a int
-                switch (cmbMes.Text.ToLower())
+                try
                 {
-                    case "enero":
-                        numeroMes = 1;
-                        break;
-                    case "febrero":
-                        numeroMes = 2;
-                        break;
-                    case "marzo":
-                        numeroMes = 3;
-                        break;
-                    case "abril":
-                        numeroMes = 4;
-                        break;
-                    case "mayo":
-                        numeroMes = 5;
-                        break;
-                    case "junio":
-                        numeroMes = 6;
-                        break;
-                    case "julio":
-                        numeroMes = 7;
-                        break;
-                    case "agosto":
-                        numeroMes = 8;
-                        break;
-                    case "septiembre":
-                        numeroMes = 9;
-                        break;
-                    case "octubre":
-                        numeroMes = 10;
-                        break;
-                    case "noviembre":
-                        numeroMes = 11;
-                        break;
-                    case "diciembre":
-                        numeroMes = 12;
-                        break;
-                    default:
-                        numeroMes = -1; 
-                        break;
+                    //cambiendo de char a int
+                    switch (cmbMes.Text.ToLower())
+                    {
+                        case "enero":
+                            numeroMes = 1;
+                            break;
+                        case "febrero":
+                            numeroMes = 2;
+                            break;
+                        case "marzo":
+                            numeroMes = 3;
+                            break;
+                        case "abril":
+                            numeroMes = 4;
+                            break;
+                        case "mayo":
+                            numeroMes = 5;
+                            break;
+                        case "junio":
+                            numeroMes = 6;
+                            break;
+                        case "julio":
+                            numeroMes = 7;
+                            break;
+                        case "agosto":
+                            numeroMes = 8;
+                            break;
+                        case "septiembre":
+                            numeroMes = 9;
+                            break;
+                        case "octubre":
+                            numeroMes = 10;
+                            break;
+                        case "noviembre":
+                            numeroMes = 11;
+                            break;
+                        case "diciembre":
+                            numeroMes = 12;
+                            break;
+                        default:
+                            numeroMes = -1;
+                            break;
+                    }
+                    //Mostrando la tabla
+
+                    comm.CommandType = System.Data.CommandType.StoredProcedure;
+                    comm.Parameters.AddWithValue("@insertarmes", numeroMes);
+                    comm.Parameters.AddWithValue("@insertarencargado", cmbEncargados.Text);
+                    comm.Parameters.AddWithValue("@insertaraño", año.Text);
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(comm);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+                    Datos.DataSource = dt;
+                    comm.Dispose();
+                    comm.Parameters.Clear();
+
+                    //Mostrando el Total
+                    comm.CommandText = "SUELDOMES";
+                    SqlParameter resultado = new SqlParameter("@resultadoSueldo", System.Data.SqlDbType.Money);
+                    resultado.Direction = System.Data.ParameterDirection.Output;
+
+
+                    comm.Parameters.Add(resultado);
+                    comm.Parameters.AddWithValue("@insertarmes", numeroMes);
+                    comm.Parameters.AddWithValue("@insertarencargado", cmbEncargados.Text);
+                    comm.Parameters.AddWithValue("@insertaraño", año.Text);
+                    comm.ExecuteNonQuery();
+
+                    Total.Text = $"El total a pagar al encargado {cmbEncargados.Text} es: ";
+                    monto.Text = $"{resultado.Value}";
                 }
-                //Mostrando la tabla
-              
-                comm.CommandType = System.Data.CommandType.StoredProcedure;
-                comm.Parameters.AddWithValue("@insertarmes", numeroMes);
-                comm.Parameters.AddWithValue("@insertarencargado", cmbEncargados.Text);
-                comm.Parameters.AddWithValue("@insertaraño", año.Text);
-
-                SqlDataAdapter adapter = new SqlDataAdapter(comm);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
-                Datos.DataSource = dt;
-
-                comm.Dispose();
-                comm.Parameters.Clear();
-
-                //Mostrando el Total
-                comm.CommandText = "SUELDOMES";
-                SqlParameter resultado = new SqlParameter("@resultadoSueldo", System.Data.SqlDbType.Money);
-                resultado.Direction = System.Data.ParameterDirection.Output;
-
-
-                comm.Parameters.Add(resultado);
-                comm.Parameters.AddWithValue("@insertarmes", numeroMes);
-                comm.Parameters.AddWithValue("@insertarencargado", cmbEncargados.Text);
-                comm.Parameters.AddWithValue("@insertaraño", año.Text);
-                comm.ExecuteNonQuery();
-
-                Total.Text = $"El total a pagar al encargado {cmbEncargados.Text} es: ";
-                monto.Text = $"{resultado.Value}";
+                catch (Exception error)
+                {
+                    MessageBox.Show(error.Message);
+                }
             }
-            catch(Exception error)
+            else
             {
-                MessageBox.Show(error.Message);
+                MessageBox.Show("Ingrese los datos por favor...");
             }
+            
             conexion.Close();
             comm.Dispose();
         }

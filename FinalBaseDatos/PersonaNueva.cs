@@ -50,44 +50,51 @@ namespace FinalBaseDatos
         {
             SqlConnection conexion = ConexionDB();
             SqlCommand comm = new SqlCommand("InsertarPersona",conexion);
-            try
+            if(Ci.Text != "" && Nombre.Text != "" && Dir.Text != "" && nroMatricula.Text != "" && Parent.Text != "" && Telf.Text != "")
             {
-                //Insertando la Persona
-                comm.CommandType = System.Data.CommandType.StoredProcedure;
-                comm.Parameters.AddWithValue("@cipersona", Ci.Text);
-                comm.Parameters.AddWithValue("@nombrepers", Nombre.Text);
-                comm.Parameters.AddWithValue("@direccion", Dir.Text);
-                comm.ExecuteNonQuery();
+                try
+                {
+                    //Insertando la Persona
+                    comm.CommandType = System.Data.CommandType.StoredProcedure;
+                    comm.Parameters.AddWithValue("@cipersona", Ci.Text);
+                    comm.Parameters.AddWithValue("@nombrepers", Nombre.Text);
+                    comm.Parameters.AddWithValue("@direccion", Dir.Text);
+                    comm.ExecuteNonQuery();
 
-                comm.Parameters.Clear();
-                comm.Dispose();
+                    comm.Parameters.Clear();
+                    comm.Dispose();
 
-                //Insertando el parentesco
-                comm.CommandText = "InsertarParentMat";
-                comm.CommandType = System.Data.CommandType.StoredProcedure;
-                comm.Parameters.AddWithValue("@matricula", nroMatricula.Text);
-                comm.Parameters.AddWithValue("@ci", Ci.Text);
-                comm.Parameters.AddWithValue("@Parentesco", Parent.Text);
-                comm.ExecuteNonQuery();
+                    //Insertando el parentesco
+                    comm.CommandText = "InsertarParentMat";
+                    comm.CommandType = System.Data.CommandType.StoredProcedure;
+                    comm.Parameters.AddWithValue("@matricula", nroMatricula.Text);
+                    comm.Parameters.AddWithValue("@ci", Ci.Text);
+                    comm.Parameters.AddWithValue("@Parentesco", Parent.Text);
+                    comm.ExecuteNonQuery();
 
-                comm.Parameters.Clear();
-                comm.Dispose();
+                    comm.Parameters.Clear();
+                    comm.Dispose();
 
-                //Insertando el numero de telefono
-                comm.CommandText = "InsertarTel";
-                comm.Parameters.AddWithValue("@CIper", Ci.Text);
-                comm.Parameters.AddWithValue("@telefono", Telf.Text);
-                comm.ExecuteNonQuery();
+                    //Insertando el numero de telefono
+                    comm.CommandText = "InsertarTel";
+                    comm.Parameters.AddWithValue("@CIper", Ci.Text);
+                    comm.Parameters.AddWithValue("@telefono", Telf.Text);
+                    comm.ExecuteNonQuery();
 
-                comm.Parameters.Clear();
-                comm.Dispose();
+                    comm.Parameters.Clear();
+                    comm.Dispose();
 
-                MessageBox.Show("Se ha registrado los datos con exito!!!");
+                    MessageBox.Show("Se ha registrado los datos con exito!!!");
 
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch(Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Ingrese los datos por favor...");
             }
             conexion.Close();
             inicio.Show();

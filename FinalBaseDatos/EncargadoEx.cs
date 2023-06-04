@@ -54,43 +54,50 @@ namespace FinalBaseDatos
         {
             SqlConnection conexion = ConexionDB();
             SqlCommand comm = new SqlCommand("InsertarInfante", conexion);
-            try
+            if(Ci.Text != "" && Parentesco.Text != "")
             {
-                comm.CommandType = System.Data.CommandType.StoredProcedure;
-                comm.Parameters.AddWithValue("@nombreinf", inf.Nombre);
-                comm.Parameters.AddWithValue("@fachanacimiento", inf.FechaNacimiento);
-                comm.Parameters.AddWithValue("@fechaalta", inf.FechaAlta);
-                comm.Parameters.AddWithValue("@tarifames", inf.TarifaMes);
-                comm.ExecuteNonQuery();
+                try
+                {
+                    comm.CommandType = System.Data.CommandType.StoredProcedure;
+                    comm.Parameters.AddWithValue("@nombreinf", inf.Nombre);
+                    comm.Parameters.AddWithValue("@fachanacimiento", inf.FechaNacimiento);
+                    comm.Parameters.AddWithValue("@fechaalta", inf.FechaAlta);
+                    comm.Parameters.AddWithValue("@tarifames", inf.TarifaMes);
+                    comm.ExecuteNonQuery();
 
-                MessageBox.Show("Se ha registrado con exito!!!");
+                    MessageBox.Show("Se ha registrado con exito!!!");
+
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show("Hubo un error al ingresar los datos... Por favor verificar");
+                    MessageBox.Show(error.Message);
+                }
+
+                comm.Dispose();
+                comm = new SqlCommand("InsertarParent", conexion);
+                try
+                {
+                    comm.CommandType = System.Data.CommandType.StoredProcedure;
+                    comm.Parameters.AddWithValue("@inf", inf.Nombre);
+                    comm.Parameters.AddWithValue("@ci", Ci.Text);
+                    comm.Parameters.AddWithValue("@Parentesco", Parentesco.Text);
+                    comm.Parameters.AddWithValue("@nac", inf.FechaNacimiento);
+
+
+                    comm.ExecuteNonQuery();
+                    MessageBox.Show("Se ha registrado con exito!!!");
+                }
+                catch (Exception error)
+                {
+                    //MessageBox.Show("Hubo un error al ingresar los datos... Por favor verificar");
+                    MessageBox.Show(error.Message);
+                }
 
             }
-            catch(Exception error)
+            else
             {
-                MessageBox.Show("Hubo un error al ingresar los datos... Por favor verificar");
-                MessageBox.Show(error.Message);
-            }
-
-
-            comm.Dispose();
-            comm = new SqlCommand("InsertarParent", conexion);
-            try
-            {
-                comm.CommandType = System.Data.CommandType.StoredProcedure;
-                comm.Parameters.AddWithValue("@inf", inf.Nombre);
-                comm.Parameters.AddWithValue("@ci", Ci.Text);
-                comm.Parameters.AddWithValue("@Parentesco", Parentesco.Text);
-                comm.Parameters.AddWithValue("@nac", inf.FechaNacimiento);
-
-
-                comm.ExecuteNonQuery();
-                MessageBox.Show("Se ha registrado con exito!!!");
-            }
-            catch (Exception error)
-            {
-                //MessageBox.Show("Hubo un error al ingresar los datos... Por favor verificar");
-                MessageBox.Show(error.Message);
+                MessageBox.Show("Ingrese los datos...");
             }
 
             comm.Dispose();

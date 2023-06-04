@@ -41,18 +41,26 @@ namespace FinalBaseDatos
         {
             SqlConnection conn = ConexionDb();
             SqlCommand comm = new SqlCommand("BorrarTel", conn);
-            try
+            if(Ci.Text != "" && Telefono.Text != "")
             {
-                comm.CommandType = System.Data.CommandType.StoredProcedure;
-                comm.Parameters.AddWithValue("@CIper", Ci.Text);
-                comm.Parameters.AddWithValue("@telefono", Telefono.Text);
-                comm.ExecuteNonQuery();
-                MessageBox.Show("Se ha eliminado con exito...");
+                try
+                {
+                    comm.CommandType = System.Data.CommandType.StoredProcedure;
+                    comm.Parameters.AddWithValue("@CIper", Ci.Text);
+                    comm.Parameters.AddWithValue("@telefono", Telefono.Text);
+                    comm.ExecuteNonQuery();
+                    MessageBox.Show("Se ha eliminado con exito...");
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show(error.Message);
+                }
             }
-            catch(Exception error)
+            else
             {
-                MessageBox.Show(error.Message);
+                MessageBox.Show("Ingrese los datos por favor");
             }
+
             comm.Dispose();
             conn.Close();
             inicio.Show();

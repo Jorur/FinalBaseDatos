@@ -30,7 +30,7 @@
         {
             this.radioNiño = new System.Windows.Forms.RadioButton();
             this.radioAdulto = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Dato = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.busca = new System.Windows.Forms.Button();
             this.datosGenerales = new System.Windows.Forms.DataGridView();
@@ -67,15 +67,15 @@
             this.radioAdulto.Text = "Carnet Adulto";
             this.radioAdulto.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // Dato
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(26, 57);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(306, 27);
-            this.textBox1.TabIndex = 2;
+            this.Dato.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(196)))), ((int)(((byte)(196)))));
+            this.Dato.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Dato.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dato.Location = new System.Drawing.Point(26, 57);
+            this.Dato.Name = "Dato";
+            this.Dato.Size = new System.Drawing.Size(306, 27);
+            this.Dato.TabIndex = 2;
             // 
             // label1
             // 
@@ -185,7 +185,7 @@
             this.Controls.Add(this.datosGenerales);
             this.Controls.Add(this.busca);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Dato);
             this.Controls.Add(this.radioAdulto);
             this.Controls.Add(this.radioNiño);
             this.Name = "Buscando";
@@ -200,7 +200,7 @@
 
         private System.Windows.Forms.RadioButton radioNiño;
         private System.Windows.Forms.RadioButton radioAdulto;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Dato;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button busca;
         private System.Windows.Forms.DataGridView datosGenerales;

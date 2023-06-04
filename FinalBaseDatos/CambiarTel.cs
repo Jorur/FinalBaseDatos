@@ -45,27 +45,35 @@ namespace FinalBaseDatos
 
         private void confi_Click(object sender, EventArgs e)
         {
+            
             SqlConnection conn = ConexionDb();
             SqlCommand comm = new SqlCommand("ModificarTel", conn);
-            try
+            if(carnet.Text != "" && Telant.Text != "" && telefono.Text != "" )
             {
-                comm.CommandType = System.Data.CommandType.StoredProcedure;
-                comm.Parameters.AddWithValue("@Ci", carnet.Text);
-                comm.Parameters.AddWithValue("@viejo", Telant.Text);
-                comm.Parameters.AddWithValue("@nuevo", telefono.Text);
-                comm.ExecuteNonQuery();
+                try
+                {
+                    comm.CommandType = System.Data.CommandType.StoredProcedure;
+                    comm.Parameters.AddWithValue("@Ci", carnet.Text);
+                    comm.Parameters.AddWithValue("@viejo", Telant.Text);
+                    comm.Parameters.AddWithValue("@nuevo", telefono.Text);
+                    comm.ExecuteNonQuery();
 
-                MessageBox.Show("Se ha registrado con exito!!!");
+                    MessageBox.Show("Se ha registrado con exito!!!");
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show(error.Message);
+                }
+                comm.Dispose();
+                conn.Close();
+                inicio = new Inicio();
+                inicio.Show();
+                this.Close();
             }
-            catch(Exception error)
+            else
             {
-                MessageBox.Show(error.Message);
+                MessageBox.Show("Ingrese los datos por favor...");
             }
-            comm.Dispose();
-            conn.Close();
-            inicio = new Inicio();
-            inicio.Show();
-            this.Close();
 
         }
     }
