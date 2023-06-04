@@ -17,8 +17,11 @@ namespace FinalBaseDatos
         private PerInf volviendo;
         private static SqlConnection ConexionDb()
         {
+
+            //string connString = "Data Source = Fabian ; Initial Catalog = GuarderiaFinal; User ID = Fabiaan; Password = Password";
             string connString = "Data Source = ATHENEA ; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
             //string connString = "Data Source = EMILIANA\\MSSQLSERVER01 ; Initial Catalog = GuarderiaFinal; User ID = emifinal; Password = Passw0rd";
+
             SqlConnection conn = new SqlConnection(connString);
             try
             {
@@ -36,7 +39,7 @@ namespace FinalBaseDatos
             InitializeComponent();
             //para la tabla
             SqlConnection conexion = ConexionDb();
-            SqlCommand comm = new SqlCommand("select nromatricula , nombre from Infantes order by Nombre", conexion);
+            SqlCommand comm = new SqlCommand("select nromatricula , nombre from Infantes where FechaBaja is null order by Nombre", conexion);
             SqlDataAdapter adapter = new SqlDataAdapter(comm);
             DataTable dt = new DataTable();
             dataGridInfantes.DataSource = dt;
@@ -76,10 +79,7 @@ namespace FinalBaseDatos
             this.Close ();
         }
 
-        private void Ingrediente_TextChanged(object sender, EventArgs e)
-        {
 
-        }
 
         private void dataGridInfantes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

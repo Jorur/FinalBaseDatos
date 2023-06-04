@@ -1,4 +1,6 @@
-﻿namespace FinalBaseDatos
+﻿using System;
+
+namespace FinalBaseDatos
 {
     partial class InsertarAlergia
     {
@@ -48,6 +50,10 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Ingrediente al que le tiene alergia";
             // 
+            // Ingrediente
+            // 
+            // 
+            //
             // Nro
             // 
             this.Nro.AutoSize = true;
@@ -138,6 +144,11 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void Ingrediente_TextChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

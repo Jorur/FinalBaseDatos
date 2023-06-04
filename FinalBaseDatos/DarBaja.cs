@@ -38,7 +38,7 @@ namespace FinalBaseDatos
             InitializeComponent();
             inicio = new Inicio();
 
-            string consulta = "Select NroMatricula as 'Numero de Matricula', Nombre from Infantes";
+            string consulta = "select nromatricula , nombre from Infantes where FechaBaja is null order by Nombre";
             SqlConnection conexion = ConexionDB();
             SqlDataAdapter adapter = new SqlDataAdapter(consulta, conexion);
             DataTable dt = new DataTable();
