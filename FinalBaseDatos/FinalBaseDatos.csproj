@@ -61,6 +61,30 @@
     <Compile Include="CambiosPi.Designer.cs">
       <DependentUpon>CambiosPi.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsumoMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsumoMenu.Designer.cs">
+      <DependentUpon>ConsumoMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consumos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consumos.Designer.cs">
+      <DependentUpon>Consumos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumosSA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsumosSA.Designer.cs">
+      <DependentUpon>ConsumosSA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsumoTienda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsumoTienda.Designer.cs">
+      <DependentUpon>ConsumoTienda.cs</DependentUpon>
+    </Compile>
     <Compile Include="DarBaja.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +177,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CambiosPi.resx">
       <DependentUpon>CambiosPi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumoMenu.resx">
+      <DependentUpon>ConsumoMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consumos.resx">
+      <DependentUpon>Consumos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumosSA.resx">
+      <DependentUpon>ConsumosSA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsumoTienda.resx">
+      <DependentUpon>ConsumoTienda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DarBaja.resx">
       <DependentUpon>DarBaja.cs</DependentUpon>

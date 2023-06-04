@@ -1,4 +1,6 @@
-﻿namespace FinalBaseDatos
+﻿using System;
+
+namespace FinalBaseDatos
 {
     partial class InsertarAlergia
     {
@@ -53,6 +55,7 @@
             this.Ingrediente.Name = "Ingrediente";
             this.Ingrediente.Size = new System.Drawing.Size(192, 22);
             this.Ingrediente.TabIndex = 1;
+            this.Ingrediente.TextChanged += new System.EventHandler(this.Ingrediente_TextChanged);
             // 
             // Nro
             // 
@@ -111,6 +114,11 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void Ingrediente_TextChanged(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

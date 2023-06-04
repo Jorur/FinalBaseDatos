@@ -11,13 +11,12 @@ using System.Windows.Forms;
 
 namespace FinalBaseDatos
 {
-    public partial class InsertarAlergia : Form
+    public partial class ConsumoMenu : Form
     {
-        private Inicio inicio;
-        private PerInf volviendo;
-        private static SqlConnection ConexionDb()
+        private Consumos consumos;
+        public static SqlConnection ConexionDB()
         {
-            string connString = "Data Source = Fabian ; Initial Catalog = GuarderiaFinal; User ID = Fabiaan; Password = Password";
+            string connString = "Data Source = Fabian\\SQLEXPRESS01 ; Initial Catalog = GuarderiaFinal; User ID = Fabiaan; Password = Password";
             SqlConnection conn = new SqlConnection(connString);
             try
             {
@@ -30,40 +29,46 @@ namespace FinalBaseDatos
             }
             return conn;
         }
-        public InsertarAlergia()
+        public ConsumoMenu()
         {
+
             InitializeComponent();
         }
 
-        private void Conf_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = ConexionDb();
-            SqlCommand comm = new SqlCommand("TieneAlergia", conn);
+            consumos = new Consumos();
+            consumos.Show();
+            this.Close();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = ConexionDB();
+            SqlCommand comm = new SqlCommand("InsertarConsumoMenu", conn);
             try
             {
                 comm.CommandType = System.Data.CommandType.StoredProcedure;
                 comm.Parameters.AddWithValue("@NroMatricula", NroMatricula.Text);
-                comm.Parameters.AddWithValue("@ingrediente", Ingrediente.Text);
+                comm.Parameters.AddWithValue("@NroMenu", NroMenu.Text);
                 comm.ExecuteNonQuery();
 
-                MessageBox.Show("Se ha ingresado la alergia con exito...");
+                MessageBox.Show("Se ha ingresado el consumo con exito...");
             }
-            catch(Exception error)
+            catch (Exception error)
             {
                 MessageBox.Show(error.Message);
             }
             comm.Dispose();
             conn.Close();
-            inicio = new Inicio();
-            inicio.Show();
+            consumos = new Consumos();
+            consumos.Show();
             this.Close();
-        }
-
-        private void volv_Click(object sender, EventArgs e)
-        {
-            volviendo = new PerInf();
-            volviendo.Show();
-            this.Close ();
         }
     }
 }
