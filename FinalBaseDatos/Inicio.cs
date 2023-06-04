@@ -16,7 +16,11 @@ namespace FinalBaseDatos
 
         private PerInf admisiones;
         private Finanzas finanaza;
+
+        private Buscando buscando;
+
         private Consumos consumo;
+
         public Inicio()
         {
             InitializeComponent();
@@ -75,6 +79,13 @@ namespace FinalBaseDatos
         {
             finanaza = new Finanzas();
             finanaza.Show();
+            this.Hide();
+        }
+
+        private void Buscar_Click(object sender, EventArgs e)
+        {
+            buscando = new Buscando();
+            buscando.Show();
             this.Hide();
         }
     }

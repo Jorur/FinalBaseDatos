@@ -44,6 +44,7 @@
             this.tabla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.tabla.Size = new System.Drawing.Size(577, 330);
             this.tabla.TabIndex = 0;
+            this.tabla.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla_CellContentClick);
             // 
             // Tablainfantes
             // 
