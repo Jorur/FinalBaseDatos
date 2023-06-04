@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Total = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Infante = new System.Windows.Forms.Label();
+            this.Recibo = new System.Windows.Forms.Label();
             this.fecha = new System.Windows.Forms.Label();
             this.menus = new System.Windows.Forms.Label();
             this.servicios = new System.Windows.Forms.Label();
@@ -41,44 +39,32 @@
             this.year = new System.Windows.Forms.Label();
             this.month = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Total = new System.Windows.Forms.Label();
+            this.Articulo = new System.Windows.Forms.Label();
+            this.Servicio = new System.Windows.Forms.Label();
+            this.Menu = new System.Windows.Forms.Label();
+            this.Mes = new System.Windows.Forms.Label();
+            this.año = new System.Windows.Forms.Label();
+            this.fech = new System.Windows.Forms.Label();
+            this.men = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // Total
+            // Recibo
             // 
-            this.Total.AutoSize = true;
-            this.Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Total.Location = new System.Drawing.Point(58, 52);
-            this.Total.Name = "Total";
-            this.Total.Size = new System.Drawing.Size(271, 25);
-            this.Total.TabIndex = 0;
-            this.Total.Text = "-------------- Recibo -------------";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(57, 99);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 18);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Nombre:";
-            // 
-            // Infante
-            // 
-            this.Infante.AutoSize = true;
-            this.Infante.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Infante.Location = new System.Drawing.Point(60, 146);
-            this.Infante.Name = "Infante";
-            this.Infante.Size = new System.Drawing.Size(55, 18);
-            this.Infante.TabIndex = 2;
-            this.Infante.Text = "Infante:";
+            this.Recibo.AutoSize = true;
+            this.Recibo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Recibo.Location = new System.Drawing.Point(58, 52);
+            this.Recibo.Name = "Recibo";
+            this.Recibo.Size = new System.Drawing.Size(271, 25);
+            this.Recibo.TabIndex = 0;
+            this.Recibo.Text = "-------------- Recibo -------------";
             // 
             // fecha
             // 
             this.fecha.AutoSize = true;
             this.fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fecha.Location = new System.Drawing.Point(60, 191);
+            this.fecha.Location = new System.Drawing.Point(46, 120);
             this.fecha.Name = "fecha";
             this.fecha.Size = new System.Drawing.Size(53, 18);
             this.fecha.TabIndex = 3;
@@ -88,7 +74,7 @@
             // 
             this.menus.AutoSize = true;
             this.menus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menus.Location = new System.Drawing.Point(60, 332);
+            this.menus.Location = new System.Drawing.Point(46, 261);
             this.menus.Name = "menus";
             this.menus.Size = new System.Drawing.Size(176, 18);
             this.menus.TabIndex = 4;
@@ -98,7 +84,7 @@
             // 
             this.servicios.AutoSize = true;
             this.servicios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.servicios.Location = new System.Drawing.Point(63, 372);
+            this.servicios.Location = new System.Drawing.Point(49, 301);
             this.servicios.Name = "servicios";
             this.servicios.Size = new System.Drawing.Size(108, 18);
             this.servicios.TabIndex = 5;
@@ -108,7 +94,7 @@
             // 
             this.tienda.AutoSize = true;
             this.tienda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tienda.Location = new System.Drawing.Point(63, 415);
+            this.tienda.Location = new System.Drawing.Point(49, 344);
             this.tienda.Name = "tienda";
             this.tienda.Size = new System.Drawing.Size(88, 18);
             this.tienda.TabIndex = 6;
@@ -118,7 +104,7 @@
             // 
             this.todo.AutoSize = true;
             this.todo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.todo.Location = new System.Drawing.Point(63, 456);
+            this.todo.Location = new System.Drawing.Point(49, 385);
             this.todo.Name = "todo";
             this.todo.Size = new System.Drawing.Size(98, 18);
             this.todo.TabIndex = 7;
@@ -139,7 +125,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(63, 230);
+            this.label3.Location = new System.Drawing.Point(49, 159);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 18);
             this.label3.TabIndex = 9;
@@ -148,7 +134,7 @@
             // year
             // 
             this.year.AutoSize = true;
-            this.year.Location = new System.Drawing.Point(100, 263);
+            this.year.Location = new System.Drawing.Point(86, 192);
             this.year.Name = "year";
             this.year.Size = new System.Drawing.Size(34, 16);
             this.year.TabIndex = 10;
@@ -157,7 +143,7 @@
             // month
             // 
             this.month.AutoSize = true;
-            this.month.Location = new System.Drawing.Point(100, 299);
+            this.month.Location = new System.Drawing.Point(86, 228);
             this.month.Name = "month";
             this.month.Size = new System.Drawing.Size(36, 16);
             this.month.TabIndex = 11;
@@ -173,11 +159,83 @@
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
+            // Total
+            // 
+            this.Total.AutoSize = true;
+            this.Total.Location = new System.Drawing.Point(153, 387);
+            this.Total.Name = "Total";
+            this.Total.Size = new System.Drawing.Size(0, 16);
+            this.Total.TabIndex = 13;
+            // 
+            // Articulo
+            // 
+            this.Articulo.AutoSize = true;
+            this.Articulo.Location = new System.Drawing.Point(143, 346);
+            this.Articulo.Name = "Articulo";
+            this.Articulo.Size = new System.Drawing.Size(0, 16);
+            this.Articulo.TabIndex = 14;
+            // 
+            // Servicio
+            // 
+            this.Servicio.AutoSize = true;
+            this.Servicio.Location = new System.Drawing.Point(164, 301);
+            this.Servicio.Name = "Servicio";
+            this.Servicio.Size = new System.Drawing.Size(0, 16);
+            this.Servicio.TabIndex = 15;
+            // 
+            // Menu
+            // 
+            this.Menu.AutoSize = true;
+            this.Menu.Location = new System.Drawing.Point(242, 334);
+            this.Menu.Name = "Menu";
+            this.Menu.Size = new System.Drawing.Size(0, 16);
+            this.Menu.TabIndex = 16;
+            // 
+            // Mes
+            // 
+            this.Mes.AutoSize = true;
+            this.Mes.Location = new System.Drawing.Point(128, 228);
+            this.Mes.Name = "Mes";
+            this.Mes.Size = new System.Drawing.Size(0, 16);
+            this.Mes.TabIndex = 17;
+            // 
+            // año
+            // 
+            this.año.AutoSize = true;
+            this.año.Location = new System.Drawing.Point(131, 192);
+            this.año.Name = "año";
+            this.año.Size = new System.Drawing.Size(0, 16);
+            this.año.TabIndex = 18;
+            // 
+            // fech
+            // 
+            this.fech.AutoSize = true;
+            this.fech.Location = new System.Drawing.Point(103, 122);
+            this.fech.Name = "fech";
+            this.fech.Size = new System.Drawing.Size(0, 16);
+            this.fech.TabIndex = 19;
+            // 
+            // men
+            // 
+            this.men.AutoSize = true;
+            this.men.Location = new System.Drawing.Point(242, 263);
+            this.men.Name = "men";
+            this.men.Size = new System.Drawing.Size(0, 16);
+            this.men.TabIndex = 20;
+            // 
             // Factura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(410, 537);
+            this.Controls.Add(this.men);
+            this.Controls.Add(this.fech);
+            this.Controls.Add(this.año);
+            this.Controls.Add(this.Mes);
+            this.Controls.Add(this.Menu);
+            this.Controls.Add(this.Servicio);
+            this.Controls.Add(this.Articulo);
+            this.Controls.Add(this.Total);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.month);
             this.Controls.Add(this.year);
@@ -188,11 +246,10 @@
             this.Controls.Add(this.servicios);
             this.Controls.Add(this.menus);
             this.Controls.Add(this.fecha);
-            this.Controls.Add(this.Infante);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.Total);
+            this.Controls.Add(this.Recibo);
             this.Name = "Factura";
             this.Text = "Factura";
+            this.Load += new System.EventHandler(this.Factura_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -201,9 +258,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label Total;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label Infante;
+        private System.Windows.Forms.Label Recibo;
         private System.Windows.Forms.Label fecha;
         private System.Windows.Forms.Label menus;
         private System.Windows.Forms.Label servicios;
@@ -214,5 +269,13 @@
         private System.Windows.Forms.Label year;
         private System.Windows.Forms.Label month;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label Total;
+        private System.Windows.Forms.Label Articulo;
+        private System.Windows.Forms.Label Servicio;
+        private System.Windows.Forms.Label Menu;
+        private System.Windows.Forms.Label Mes;
+        private System.Windows.Forms.Label año;
+        private System.Windows.Forms.Label fech;
+        private System.Windows.Forms.Label men;
     }
 }

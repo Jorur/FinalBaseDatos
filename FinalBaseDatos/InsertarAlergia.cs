@@ -17,8 +17,8 @@ namespace FinalBaseDatos
         private PerInf volviendo;
         private static SqlConnection ConexionDb()
         {
-            //string connString = "Data Source = ATHENEA ; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
-            string connString = "Data Source = EMILIANA\\MSSQLSERVER01 ; Initial Catalog = GuarderiaFinal; User ID = emifinal; Password = Passw0rd";
+            string connString = "Data Source = ATHENEA ; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
+            //string connString = "Data Source = EMILIANA\\MSSQLSERVER01 ; Initial Catalog = GuarderiaFinal; User ID = emifinal; Password = Passw0rd";
             SqlConnection conn = new SqlConnection(connString);
             try
             {
@@ -41,6 +41,8 @@ namespace FinalBaseDatos
             DataTable dt = new DataTable();
             dataGridInfantes.DataSource = dt;
             adapter.Fill(dt);
+
+            conexion.Close();
         }
 
         private void Conf_Click(object sender, EventArgs e)

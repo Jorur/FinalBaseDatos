@@ -17,8 +17,8 @@ namespace FinalBaseDatos
         private Finanzas finanzas;
         private static SqlConnection ConexionDb()
         {
-            //string connString = "Data Source = ATHENEA ; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
-            string connString = "Data Source = EMILIANA\\MSSQLSERVER01 ; Initial Catalog = GuarderiaFinal; User ID = emifinal; Password = Passw0rd";
+            string connString = "Data Source = ATHENEA ; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
+            //string connString = "Data Source = EMILIANA\\MSSQLSERVER01 ; Initial Catalog = GuarderiaFinal; User ID = emifinal; Password = Passw0rd";
             SqlConnection conn = new SqlConnection(connString);
             try
             {
@@ -54,19 +54,74 @@ namespace FinalBaseDatos
         {
             SqlConnection conexion = ConexionDb();
             SqlCommand comm = new SqlCommand("Reporte_cargoMes", conexion);
+            int numeroMes;
             try
             {
+                switch (combomes.Text.ToLower())
+                {
+                    case "enero":
+                        numeroMes = 1;
+                        break;
+                    case "febrero":
+                        numeroMes = 2;
+                        break;
+                    case "marzo":
+                        numeroMes = 3;
+                        break;
+                    case "abril":
+                        numeroMes = 4;
+                        break;
+                    case "mayo":
+                        numeroMes = 5;
+                        break;
+                    case "junio":
+                        numeroMes = 6;
+                        break;
+                    case "julio":
+                        numeroMes = 7;
+                        break;
+                    case "agosto":
+                        numeroMes = 8;
+                        break;
+                    case "septiembre":
+                        numeroMes = 9;
+                        break;
+                    case "octubre":
+                        numeroMes = 10;
+                        break;
+                    case "noviembre":
+                        numeroMes = 11;
+                        break;
+                    case "diciembre":
+                        numeroMes = 12;
+                        break;
+                    default:
+                        numeroMes = -1;
+                        break;
+                }
                 //Generando el Cargo Mes
                 comm.CommandType = System.Data.CommandType.StoredProcedure;
                 SqlParameter resultado = new SqlParameter("@resultado", System.Data.SqlDbType.Money);
                 resultado.Direction = System.Data.ParameterDirection.Output;
 
+                SqlParameter menu = new SqlParameter("@menus", System.Data.SqlDbType.Money);
+                menu.Direction = System.Data.ParameterDirection.Output;
+
+                SqlParameter servicio = new SqlParameter("@servicios", System.Data.SqlDbType.Money);
+                servicio.Direction = System.Data.ParameterDirection.Output;
+
+                SqlParameter tienda = new SqlParameter("@tienda", System.Data.SqlDbType.Money);
+                tienda.Direction = System.Data.ParameterDirection.Output;
+
                 comm.Parameters.Add(resultado);
+                comm.Parameters.Add(menu);
+                comm.Parameters.Add(servicio);
+                comm.Parameters.Add(tienda);
                 comm.Parameters.AddWithValue("@inf", infante.Text);
                 comm.Parameters.AddWithValue("@año", año.Text);
-                comm.Parameters.AddWithValue("@mes", mes.Text);
+                comm.Parameters.AddWithValue("@mes", numeroMes);
                 comm.ExecuteNonQuery();
-                factura = new Factura(resultado);
+                factura = new Factura(resultado, menu, servicio, tienda, combomes.Text, año.Text);
 
                 comm.Dispose();
                 comm.Parameters.Clear();
@@ -75,7 +130,7 @@ namespace FinalBaseDatos
                 comm.CommandText = "PagoMensualidad";
                 comm.Parameters.AddWithValue("@nroMatricula", infante.Text);
                 comm.Parameters.AddWithValue("@año", año.Text);
-                comm.Parameters.AddWithValue("@mes", mes.Text);
+                comm.Parameters.AddWithValue("@mes", numeroMes);
                 comm.ExecuteNonQuery();
                 MessageBox.Show("Se ha registrado el pago con exito");
             }
