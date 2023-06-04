@@ -16,6 +16,7 @@ namespace FinalBaseDatos
 
         private PerInf admisiones;
         private Finanzas finanaza;
+        private Consumos consumo;
         public Inicio()
         {
             InitializeComponent();
@@ -65,7 +66,9 @@ namespace FinalBaseDatos
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
+            consumo = new Consumos();
+            consumo.Show();
+            this.Hide();
         }
 
         private void button2_Click_1(object sender, EventArgs e)
