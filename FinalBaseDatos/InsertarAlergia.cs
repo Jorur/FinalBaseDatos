@@ -39,7 +39,7 @@ namespace FinalBaseDatos
             InitializeComponent();
             //para la tabla
             SqlConnection conexion = ConexionDb();
-            SqlCommand comm = new SqlCommand("select nromatricula , nombre from Infantes order by Nombre", conexion);
+            SqlCommand comm = new SqlCommand("select nromatricula , nombre from Infantes where FechaBaja is null order by Nombre", conexion);
             SqlDataAdapter adapter = new SqlDataAdapter(comm);
             DataTable dt = new DataTable();
             dataGridInfantes.DataSource = dt;
@@ -79,10 +79,7 @@ namespace FinalBaseDatos
             this.Close ();
         }
 
-        private void Ingrediente_TextChanged(object sender, EventArgs e)
-        {
 
-        }
 
         private void dataGridInfantes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

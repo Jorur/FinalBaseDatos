@@ -16,7 +16,8 @@ namespace FinalBaseDatos
         private Consumos consumos;
         public static SqlConnection ConexionDB()
         {
-            string connString = "Data Source = Fabian\\SQLEXPRESS01 ; Initial Catalog = GuarderiaFinal; User ID = Fabiaan; Password = Password";
+            //string connString = "Data Source = Fabian\\SQLEXPRESS01 ; Initial Catalog = GuarderiaFinal; User ID = Fabiaan; Password = Password";
+            string connString = "Data Source = ATHENEA; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
             SqlConnection conn = new SqlConnection(connString);
             try
             {

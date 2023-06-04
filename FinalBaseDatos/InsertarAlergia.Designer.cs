@@ -50,14 +50,8 @@ namespace FinalBaseDatos
             this.label1.TabIndex = 0;
             this.label1.Text = "Ingrediente al que le tiene alergia";
             // 
-
             // Ingrediente
             // 
-            this.Ingrediente.Location = new System.Drawing.Point(130, 104);
-            this.Ingrediente.Name = "Ingrediente";
-            this.Ingrediente.Size = new System.Drawing.Size(192, 22);
-            this.Ingrediente.TabIndex = 1;
-            this.Ingrediente.TextChanged += new System.EventHandler(this.Ingrediente_TextChanged);
             // 
             //
             // Nro

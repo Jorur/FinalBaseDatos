@@ -32,6 +32,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.Stock = new System.Windows.Forms.Button();
+            this.Reponer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -74,11 +76,33 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // Stock
+            // 
+            this.Stock.Location = new System.Drawing.Point(661, 403);
+            this.Stock.Name = "Stock";
+            this.Stock.Size = new System.Drawing.Size(75, 23);
+            this.Stock.TabIndex = 4;
+            this.Stock.Text = "Stock";
+            this.Stock.UseVisualStyleBackColor = true;
+            this.Stock.Click += new System.EventHandler(this.Stock_Click);
+            // 
+            // Reponer
+            // 
+            this.Reponer.Location = new System.Drawing.Point(492, 403);
+            this.Reponer.Name = "Reponer";
+            this.Reponer.Size = new System.Drawing.Size(132, 23);
+            this.Reponer.TabIndex = 5;
+            this.Reponer.Text = "Reponer Stock";
+            this.Reponer.UseVisualStyleBackColor = true;
+            this.Reponer.Click += new System.EventHandler(this.Reponer_Click);
+            // 
             // Consumos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Reponer);
+            this.Controls.Add(this.Stock);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -95,5 +119,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button Stock;
+        private System.Windows.Forms.Button Reponer;
     }
 }

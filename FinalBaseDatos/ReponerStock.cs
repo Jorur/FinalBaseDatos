@@ -11,14 +11,13 @@ using System.Windows.Forms;
 
 namespace FinalBaseDatos
 {
-    public partial class ConsumoMenu : Form
+    public partial class ReponerStock : Form
     {
-        private Consumos consumos;
+        private Consumos cons;
         public static SqlConnection ConexionDB()
         {
-            //string connString = "Data Source = Fabian\\SQLEXPRESS01 ; Initial Catalog = GuarderiaFinal; User ID = Fabiaan; Password = Password";
+            //string connString = "Data Source = Fabian ; Initial Catalog = GuarderiaFinal; User ID = Fabiaan; Password = Password";
             string connString = "Data Source = ATHENEA ; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
-
             SqlConnection conn = new SqlConnection(connString);
             try
             {
@@ -31,46 +30,40 @@ namespace FinalBaseDatos
             }
             return conn;
         }
-        public ConsumoMenu()
+        public ReponerStock()
         {
-
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Volver_Click(object sender, EventArgs e)
         {
-            consumos = new Consumos();
-            consumos.Show();
+            cons = new Consumos();
+            cons.Show();
             this.Close();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void Conf_Click(object sender, EventArgs e)
         {
+            SqlConnection conexion = ConexionDB();
+            SqlCommand comm = new SqlCommand("ReponerStock", conexion);
 
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            SqlConnection conn = ConexionDB();
-            SqlCommand comm = new SqlCommand("InsertarConsumoMenu", conn);
             try
             {
                 comm.CommandType = System.Data.CommandType.StoredProcedure;
-                comm.Parameters.AddWithValue("@NroMatricula", NroMatricula.Text);
-                comm.Parameters.AddWithValue("@NroMenu", NroMenu.Text);
+                comm.Parameters.AddWithValue("@codigoArt", CodArt.Text);
+                comm.Parameters.AddWithValue("@stock", Cantidad.Text);
                 comm.ExecuteNonQuery();
 
-                MessageBox.Show("Se ha ingresado el consumo con exito...");
+                MessageBox.Show("Se ha registrado correctamente...");
             }
-            catch (Exception error)
+            catch(Exception error)
             {
                 MessageBox.Show(error.Message);
             }
             comm.Dispose();
-            conn.Close();
-            consumos = new Consumos();
-            consumos.Show();
-            this.Close();
+            conexion.Close();
+            CodArt.Clear();
+            Cantidad.Clear();
         }
     }
 }

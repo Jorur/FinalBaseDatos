@@ -17,9 +17,12 @@ namespace FinalBaseDatos
         private ConsumoMenu consumomenu;
         private ConsumoTienda consumotienda;
         private ConsumosSA consumoservad;
+        private StockAr stock;
+        private ReponerStock rep;
         public static SqlConnection ConexionDB()
         {
-            string connString = "Data Source = Fabian ; Initial Catalog = GuarderiaFinal; User ID = Fabiaan; Password = Password";
+            //string connString = "Data Source = Fabian ; Initial Catalog = GuarderiaFinal; User ID = Fabiaan; Password = Password";
+            string connString = "Data Source = ATHENEA ; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
             SqlConnection conn = new SqlConnection(connString);
             try
             {
@@ -65,6 +68,19 @@ namespace FinalBaseDatos
             inicio = new Inicio();
             inicio.Show();
             this.Close();
+        }
+
+        private void Stock_Click(object sender, EventArgs e)
+        {
+            stock = new StockAr();
+            stock.Show();
+        }
+
+        private void Reponer_Click(object sender, EventArgs e)
+        {
+            rep = new ReponerStock();
+            rep.Show();
+            this.Hide();
         }
     }
 }
