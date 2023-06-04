@@ -40,6 +40,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Volver = new System.Windows.Forms.Button();
             this.back = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,7 +80,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(105, 153);
+            this.label2.Location = new System.Drawing.Point(105, 142);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(188, 24);
             this.label2.TabIndex = 3;
@@ -98,7 +100,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(440, 50);
+            this.label3.Location = new System.Drawing.Point(440, 36);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(152, 24);
             this.label3.TabIndex = 5;
@@ -142,7 +144,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.YellowGreen;
             this.pictureBox1.Image = global::FinalBaseDatos.Properties.Resources.PhotoRoom_20230531_181445;
             this.pictureBox1.Location = new System.Drawing.Point(67, 235);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(616, 217);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -152,7 +154,7 @@
             // Volver
             // 
             this.Volver.Location = new System.Drawing.Point(795, 494);
-            this.Volver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Volver.Margin = new System.Windows.Forms.Padding(4);
             this.Volver.Name = "Volver";
             this.Volver.Size = new System.Drawing.Size(116, 33);
             this.Volver.TabIndex = 9;
@@ -170,12 +172,34 @@
             this.back.UseVisualStyleBackColor = true;
             this.back.Click += new System.EventHandler(this.back_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label5.Location = new System.Drawing.Point(109, 170);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(75, 16);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "AA-MM-DD";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label6.Location = new System.Drawing.Point(441, 68);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(75, 16);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "AA-MM-DD";
+            // 
             // InsertarInf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.YellowGreen;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.back);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Volver);
@@ -214,5 +238,7 @@
 
         private System.Windows.Forms.Button Volver;
         private System.Windows.Forms.Button back;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

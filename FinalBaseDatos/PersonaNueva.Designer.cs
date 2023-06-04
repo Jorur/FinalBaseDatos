@@ -44,6 +44,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Confirmar = new System.Windows.Forms.Button();
             this.volver = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Vertabla = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -56,42 +58,42 @@
             // Nombre
             // 
             this.Nombre.BackColor = System.Drawing.Color.White;
-            this.Nombre.Location = new System.Drawing.Point(146, 59);
+            this.Nombre.Location = new System.Drawing.Point(92, 108);
             this.Nombre.Name = "Nombre";
             this.Nombre.Size = new System.Drawing.Size(170, 22);
             this.Nombre.TabIndex = 1;
             // 
             // Ci
             // 
-            this.Ci.Location = new System.Drawing.Point(146, 138);
+            this.Ci.Location = new System.Drawing.Point(92, 187);
             this.Ci.Name = "Ci";
             this.Ci.Size = new System.Drawing.Size(170, 22);
             this.Ci.TabIndex = 2;
             // 
             // Dir
             // 
-            this.Dir.Location = new System.Drawing.Point(146, 216);
+            this.Dir.Location = new System.Drawing.Point(92, 265);
             this.Dir.Name = "Dir";
             this.Dir.Size = new System.Drawing.Size(170, 22);
             this.Dir.TabIndex = 3;
             // 
             // Telf
             // 
-            this.Telf.Location = new System.Drawing.Point(146, 290);
+            this.Telf.Location = new System.Drawing.Point(92, 339);
             this.Telf.Name = "Telf";
             this.Telf.Size = new System.Drawing.Size(175, 22);
             this.Telf.TabIndex = 4;
             // 
             // nroMatricula
             // 
-            this.nroMatricula.Location = new System.Drawing.Point(524, 118);
+            this.nroMatricula.Location = new System.Drawing.Point(521, 143);
             this.nroMatricula.Name = "nroMatricula";
             this.nroMatricula.Size = new System.Drawing.Size(175, 22);
             this.nroMatricula.TabIndex = 5;
             // 
             // Parent
             // 
-            this.Parent.Location = new System.Drawing.Point(524, 191);
+            this.Parent.Location = new System.Drawing.Point(521, 216);
             this.Parent.Name = "Parent";
             this.Parent.Size = new System.Drawing.Size(175, 22);
             this.Parent.TabIndex = 6;
@@ -100,7 +102,7 @@
             // 
             this.Nom.AutoSize = true;
             this.Nom.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nom.Location = new System.Drawing.Point(143, 40);
+            this.Nom.Location = new System.Drawing.Point(89, 89);
             this.Nom.Name = "Nom";
             this.Nom.Size = new System.Drawing.Size(238, 16);
             this.Nom.TabIndex = 7;
@@ -110,7 +112,7 @@
             // 
             this.carnet.AutoSize = true;
             this.carnet.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.carnet.Location = new System.Drawing.Point(146, 116);
+            this.carnet.Location = new System.Drawing.Point(92, 165);
             this.carnet.Name = "carnet";
             this.carnet.Size = new System.Drawing.Size(143, 16);
             this.carnet.TabIndex = 8;
@@ -120,7 +122,7 @@
             // 
             this.direccion.AutoSize = true;
             this.direccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.direccion.Location = new System.Drawing.Point(146, 194);
+            this.direccion.Location = new System.Drawing.Point(92, 243);
             this.direccion.Name = "direccion";
             this.direccion.Size = new System.Drawing.Size(73, 16);
             this.direccion.TabIndex = 9;
@@ -130,7 +132,7 @@
             // 
             this.Tel.AutoSize = true;
             this.Tel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tel.Location = new System.Drawing.Point(146, 268);
+            this.Tel.Location = new System.Drawing.Point(92, 317);
             this.Tel.Name = "Tel";
             this.Tel.Size = new System.Drawing.Size(69, 16);
             this.Tel.TabIndex = 10;
@@ -140,7 +142,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(521, 96);
+            this.label1.Location = new System.Drawing.Point(518, 121);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(128, 16);
             this.label1.TabIndex = 11;
@@ -150,7 +152,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(524, 170);
+            this.label2.Location = new System.Drawing.Point(521, 195);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 16);
             this.label2.TabIndex = 12;
@@ -159,19 +161,19 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(502, 40);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(503, 77);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(175, 25);
+            this.label3.Size = new System.Drawing.Size(209, 29);
             this.label3.TabIndex = 13;
             this.label3.Text = "Datos del Infante";
             // 
             // Confirmar
             // 
-            this.Confirmar.BackColor = System.Drawing.Color.RosyBrown;
-            this.Confirmar.Location = new System.Drawing.Point(559, 310);
+            this.Confirmar.BackColor = System.Drawing.Color.IndianRed;
+            this.Confirmar.Location = new System.Drawing.Point(524, 304);
             this.Confirmar.Name = "Confirmar";
-            this.Confirmar.Size = new System.Drawing.Size(118, 62);
+            this.Confirmar.Size = new System.Drawing.Size(172, 40);
             this.Confirmar.TabIndex = 14;
             this.Confirmar.Text = "Confirmar";
             this.Confirmar.UseVisualStyleBackColor = false;
@@ -189,12 +191,35 @@
             this.volver.UseVisualStyleBackColor = true;
             this.volver.Click += new System.EventHandler(this.volver_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(55, 40);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(285, 29);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Datos del Responsable";
+            // 
+            // Vertabla
+            // 
+            this.Vertabla.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Vertabla.Location = new System.Drawing.Point(723, 141);
+            this.Vertabla.Name = "Vertabla";
+            this.Vertabla.Size = new System.Drawing.Size(75, 23);
+            this.Vertabla.TabIndex = 17;
+            this.Vertabla.Text = "Buscar";
+            this.Vertabla.UseVisualStyleBackColor = true;
+            this.Vertabla.Click += new System.EventHandler(this.Vertabla_Click);
+            // 
             // PersonaNueva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(242)))), ((int)(((byte)(194)))));
             this.ClientSize = new System.Drawing.Size(820, 450);
+            this.Controls.Add(this.Vertabla);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.volver);
             this.Controls.Add(this.Confirmar);
             this.Controls.Add(this.label3);
@@ -237,5 +262,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button Confirmar;
         private System.Windows.Forms.Button volver;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button Vertabla;
     }
 }

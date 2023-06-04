@@ -66,7 +66,7 @@
             this.ModificarPerInf.Font = new System.Drawing.Font("Corbel", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ModificarPerInf.Location = new System.Drawing.Point(598, 398);
             this.ModificarPerInf.Name = "ModificarPerInf";
-            this.ModificarPerInf.Size = new System.Drawing.Size(95, 40);
+            this.ModificarPerInf.Size = new System.Drawing.Size(104, 40);
             this.ModificarPerInf.TabIndex = 2;
             this.ModificarPerInf.Text = "Cambios";
             this.ModificarPerInf.UseVisualStyleBackColor = false;
@@ -87,6 +87,7 @@
             this.Alergia.BackColor = System.Drawing.Color.MediumTurquoise;
             this.Alergia.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Alergia.Font = new System.Drawing.Font("Corbel", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Alergia.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Alergia.Location = new System.Drawing.Point(472, 398);
             this.Alergia.Name = "Alergia";
             this.Alergia.Size = new System.Drawing.Size(107, 40);

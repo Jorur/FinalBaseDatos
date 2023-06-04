@@ -19,5 +19,9 @@ namespace FinalBaseDatos
             Total.Text = $"El total pagado es de: {valor.Value}";
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -15,10 +15,11 @@ namespace FinalBaseDatos
     {
         private Inicio inicio;
         private Infante inf;
-
+        private InsertarPer personanueva;
         private static SqlConnection ConexionDB()
         {
-            string connString = "Data Source = ATHENEA ; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
+            //string connString = "Data Source = ATHENEA ; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
+            string connString = "Data Source = EMILIANA\\MSSQLSERVER01 ; Initial Catalog = GuarderiaFinal; User ID = emifinal; Password = Passw0rd";
             SqlConnection conn = new SqlConnection(connString);
             try
             {
@@ -97,6 +98,13 @@ namespace FinalBaseDatos
             inicio.Show();
             this.Close();
 
+        }
+
+        private void volver_Click(object sender, EventArgs e)
+        {
+            personanueva = new InsertarPer(inf);
+            personanueva.Show();
+            this.Close();
         }
     }
 }
