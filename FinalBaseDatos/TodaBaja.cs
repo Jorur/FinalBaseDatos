@@ -8,15 +8,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace FinalBaseDatos
 {
-    public partial class Tablainfantes : Form
+    public partial class TodaBaja : Form
     {
-        public static SqlConnection ConexionDB()
+        private static SqlConnection ConexionDb()
         {
-            string connString = "Data Source = ATHENEA ; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
-            //string connString = "Data Source = EMILIANA\\MSSQLSERVER01 ; Initial Catalog = GuarderiaFinal; User ID = emifinal; Password = Passw0rd";
+            //string connString = "Data Source = ATHENEA ; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
+            string connString = "Data Source = EMILIANA\\MSSQLSERVER01 ; Initial Catalog = GuarderiaFinal; User ID = emifinal; Password = Passw0rd";
             SqlConnection conn = new SqlConnection(connString);
             try
             {
@@ -29,30 +30,17 @@ namespace FinalBaseDatos
             }
             return conn;
         }
-        public Tablainfantes()
+        public TodaBaja()
         {
             InitializeComponent();
-
             //mostrando tablas
-            string consulta = "Select NroMatricula as 'Numero de Matricula', Nombre from Infantes";
-            SqlConnection conexion = ConexionDB();
+            string consulta = "Select * from Infantes where FechaBaja is not null";
+            SqlConnection conexion = ConexionDb();
             SqlDataAdapter adapter = new SqlDataAdapter(consulta, conexion);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
-            tabla.DataSource = dt;
+            Baja.DataSource = dt;
             conexion.Close();
-
-        }
-
-        //no tocar por si acaso
-        private void Tablainfantes_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabla_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

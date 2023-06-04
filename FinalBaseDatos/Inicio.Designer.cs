@@ -119,6 +119,7 @@
             this.Buscar.TabIndex = 6;
             this.Buscar.Text = "Buscar";
             this.Buscar.UseVisualStyleBackColor = false;
+            this.Buscar.Click += new System.EventHandler(this.Buscar_Click);
             // 
             // pictureBox1
             // 

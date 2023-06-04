@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Buscando.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buscando.Designer.cs">
+      <DependentUpon>Buscando.cs</DependentUpon>
+    </Compile>
     <Compile Include="CambiarTel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,12 +154,27 @@
     <Compile Include="Tablainfantes.Designer.cs">
       <DependentUpon>Tablainfantes.cs</DependentUpon>
     </Compile>
+    <Compile Include="TablasAR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TablasAR.Designer.cs">
+      <DependentUpon>TablasAR.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telefonos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Telefonos.Designer.cs">
       <DependentUpon>Telefonos.cs</DependentUpon>
     </Compile>
+    <Compile Include="TodaBaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TodaBaja.Designer.cs">
+      <DependentUpon>TodaBaja.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Buscando.resx">
+      <DependentUpon>Buscando.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CambiarTel.resx">
       <DependentUpon>CambiarTel.cs</DependentUpon>
     </EmbeddedResource>
@@ -212,8 +233,14 @@
     <EmbeddedResource Include="Tablainfantes.resx">
       <DependentUpon>Tablainfantes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TablasAR.resx">
+      <DependentUpon>TablasAR.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telefonos.resx">
       <DependentUpon>Telefonos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TodaBaja.resx">
+      <DependentUpon>TodaBaja.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
