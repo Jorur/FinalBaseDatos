@@ -30,7 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.infante = new System.Windows.Forms.TextBox();
-            this.mes = new System.Windows.Forms.TextBox();
             this.año = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -63,14 +62,6 @@
             this.infante.Name = "infante";
             this.infante.Size = new System.Drawing.Size(100, 22);
             this.infante.TabIndex = 1;
-            // 
-            // mes
-            // 
-            this.mes.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.mes.Location = new System.Drawing.Point(15, 49);
-            this.mes.Name = "mes";
-            this.mes.Size = new System.Drawing.Size(100, 22);
-            this.mes.TabIndex = 2;
             // 
             // año
             // 
@@ -244,7 +235,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.año);
-            this.Controls.Add(this.mes);
             this.Controls.Add(this.infante);
             this.Controls.Add(this.label1);
             this.Name = "Mensualidad";
@@ -259,7 +249,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox infante;
-        private System.Windows.Forms.TextBox mes;
         private System.Windows.Forms.TextBox año;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
