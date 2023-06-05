@@ -131,6 +131,7 @@
             // 
             // cmbEncargados
             // 
+            this.cmbEncargados.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEncargados.FormattingEnabled = true;
             this.cmbEncargados.Items.AddRange(new object[] {
             "Dr. Ricalde",
@@ -145,6 +146,7 @@
             // 
             // cmbMes
             // 
+            this.cmbMes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMes.FormattingEnabled = true;
             this.cmbMes.Items.AddRange(new object[] {
             "Enero",

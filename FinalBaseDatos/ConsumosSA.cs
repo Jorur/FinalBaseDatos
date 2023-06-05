@@ -14,6 +14,7 @@ namespace FinalBaseDatos
     public partial class ConsumosSA : Form
     {
         private Consumos consumos;
+        private Tablainfantes tablainfantes;
         public static SqlConnection ConexionDB()
         {
             //string connString = "Data Source = Fabian\\SQLEXPRESS01 ; Initial Catalog = GuarderiaFinal; User ID = Fabiaan; Password = Password";
@@ -52,13 +53,36 @@ namespace FinalBaseDatos
         {
             SqlConnection conn = ConexionDB();
             SqlCommand comm = new SqlCommand("InsertarConsumoServicio", conn);
-            if(NroMatricula.Text != "" && CodServ.Text != "" && Descripcion.Text != "")
+            string codigo;
+            if(NroMatricula.Text != "" && cmbSer.Text != "" && Descripcion.Text != "")
             {
                 try
                 {
+                    switch (cmbSer.Text)
+                    {
+                        case "Pediatría":
+                            codigo = "Ser1";
+                            break;
+                        case "Fonoaudiología":
+                            codigo = "Ser2";
+                            break;
+                        case "Nutrición":
+                            codigo = "Ser3";
+                            break;
+                        case "Apoyo Psicomotriz":
+                            codigo = "Ser4";
+                            break;
+                        case "Lavandería":
+                            codigo = "Ser5";
+                            break;
+                        
+                        default:
+                            codigo = "";
+                            break;
+                    }
                     comm.CommandType = System.Data.CommandType.StoredProcedure;
                     comm.Parameters.AddWithValue("@nromatricula", NroMatricula.Text);
-                    comm.Parameters.AddWithValue("@codserv", CodServ.Text);
+                    comm.Parameters.AddWithValue("@codserv", codigo);
                     comm.Parameters.AddWithValue("@descripcion", Descripcion.Text);
                     comm.ExecuteNonQuery();
 
@@ -79,6 +103,13 @@ namespace FinalBaseDatos
             consumos = new Consumos();
             consumos.Show();
             this.Close();
+        }
+
+        private void ver_Click(object sender, EventArgs e)
+        {
+            tablainfantes = new Tablainfantes();
+            tablainfantes.Show();
+
         }
     }
 }

@@ -112,10 +112,10 @@
             // 
             this.Buscar.BackColor = System.Drawing.Color.LightCyan;
             this.Buscar.Font = new System.Drawing.Font("Corbel", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Buscar.Location = new System.Drawing.Point(789, 69);
+            this.Buscar.Location = new System.Drawing.Point(789, 61);
             this.Buscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Buscar.Name = "Buscar";
-            this.Buscar.Size = new System.Drawing.Size(133, 23);
+            this.Buscar.Size = new System.Drawing.Size(133, 33);
             this.Buscar.TabIndex = 6;
             this.Buscar.Text = "Buscar";
             this.Buscar.UseVisualStyleBackColor = false;

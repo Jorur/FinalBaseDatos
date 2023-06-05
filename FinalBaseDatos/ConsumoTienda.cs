@@ -14,6 +14,7 @@ namespace FinalBaseDatos
     public partial class ConsumoTienda : Form
     {
         private Consumos consumos;
+        private Tablainfantes tablainfantes;
         public static SqlConnection ConexionDB()
         {
             //string connString = "Data Source = Fabian\\SQLEXPRESS01 ; Initial Catalog = GuarderiaFinal; User ID = Fabiaan; Password = Password";
@@ -47,16 +48,59 @@ namespace FinalBaseDatos
         {
             SqlConnection conn = ConexionDB();
             SqlCommand comm = new SqlCommand("InsertarConsumosTienda", conn);
-            if(NroMatricula.Text != "" && IdArticulo.Text != "" && Cantidad.Text != "")
+            string articulo;
+
+            if(NroMatricula.Text != "" && cmbArticulo.Text != "" && Cantidad.Text != "")
             {
                 try
                 {
+                    switch (cmbArticulo.Text)
+                    {
+                        case "Pañales":
+                            articulo = "Art1";
+                            break;
+                        case "Mamaderas":
+                            articulo = "Art2";
+                            break;
+                        case "Caja Pañitos":
+                            articulo = "Art3";
+                            break;
+                        case "Talco":
+                            articulo = "Art4";
+                            break;
+                        case "Juguetes":
+                            articulo = "Art5";
+                            break;
+
+                        case "Dulces":
+                            articulo = "Art6";
+                            break;
+
+                        case "Chupete":
+                            articulo = "Art7";
+                            break;
+                        case "Hipoglos":
+                            articulo = "Art8";
+                            break;
+                        case "Pichica":
+                            articulo = "Art9";
+                            break;
+
+                        case "Ropa interior":
+                            articulo = "Art10";
+                            break;
+
+
+                        default:
+                            articulo = "";
+                            break;
+                    }
                     comm.CommandType = System.Data.CommandType.StoredProcedure;
                     SqlParameter resultado = new SqlParameter("@resultado", System.Data.SqlDbType.VarChar, 50);
                     resultado.Direction = System.Data.ParameterDirection.Output;
                     comm.Parameters.Add(resultado);
                     comm.Parameters.AddWithValue("@NroMatricula", NroMatricula.Text);
-                    comm.Parameters.AddWithValue("@IdArticulo", IdArticulo.Text);
+                    comm.Parameters.AddWithValue("@IdArticulo", articulo);
                     comm.Parameters.AddWithValue("@cantidad", Cantidad.Text);
                     comm.ExecuteNonQuery();
                     string alerta = resultado.Value.ToString();
@@ -93,6 +137,12 @@ namespace FinalBaseDatos
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            tablainfantes = new Tablainfantes();
+            tablainfantes.Show();
         }
     }
 }
