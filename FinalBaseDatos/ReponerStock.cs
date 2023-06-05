@@ -33,12 +33,54 @@ namespace FinalBaseDatos
             Conexion db = new Conexion();
             SqlConnection conexion = db.ConexionDb();
             SqlCommand comm = new SqlCommand("ReponerStock", conexion);
-            if(CodArt.Text != "" && Cantidad.Text != "")
+            string articulo;
+            if(cmbarticulo.Text != "" && Cantidad.Text != "")
             {
                 try
                 {
+                    switch (cmbarticulo.Text)
+                    {
+                        case "Pañales":
+                            articulo = "Art1";
+                            break;
+                        case "Mamaderas":
+                            articulo = "Art2";
+                            break;
+                        case "Caja Pañitos":
+                            articulo = "Art3";
+                            break;
+                        case "Talco":
+                            articulo = "Art4";
+                            break;
+                        case "Juguetes":
+                            articulo = "Art5";
+                            break;
+
+                        case "Dulces":
+                            articulo = "Art6";
+                            break;
+
+                        case "Chupete":
+                            articulo = "Art7";
+                            break;
+                        case "Hipoglos":
+                            articulo = "Art8";
+                            break;
+                        case "Pichica":
+                            articulo = "Art9";
+                            break;
+
+                        case "Ropa interior":
+                            articulo = "Art10";
+                            break;
+
+
+                        default:
+                            articulo = "";
+                            break;
+                    }
                     comm.CommandType = System.Data.CommandType.StoredProcedure;
-                    comm.Parameters.AddWithValue("@codigoArt", CodArt.Text);
+                    comm.Parameters.AddWithValue("@codigoArt", articulo);
                     comm.Parameters.AddWithValue("@stock", Cantidad.Text);
                     comm.ExecuteNonQuery();
 
@@ -56,7 +98,6 @@ namespace FinalBaseDatos
             
             comm.Dispose();
             conexion.Close();
-            CodArt.Clear();
             Cantidad.Clear();
         }
     }

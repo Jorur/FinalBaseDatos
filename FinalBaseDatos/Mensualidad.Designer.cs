@@ -131,12 +131,13 @@
             // 
             this.go.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(202)))), ((int)(((byte)(225)))));
             this.go.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.go.Location = new System.Drawing.Point(631, 88);
+            this.go.Location = new System.Drawing.Point(24, 100);
             this.go.Name = "go";
-            this.go.Size = new System.Drawing.Size(105, 35);
+            this.go.Size = new System.Drawing.Size(98, 23);
             this.go.TabIndex = 14;
-            this.go.Text = "Buscar";
+            this.go.Text = "Ver lista";
             this.go.UseVisualStyleBackColor = false;
+            this.go.Click += new System.EventHandler(this.go_Click);
             // 
             // Datos
             // 

@@ -426,5 +426,11 @@ namespace FinalBaseDatos
             conexion.Close();
             comm.Dispose();
         }
+
+        private void go_Click(object sender, EventArgs e)
+        {
+            tablainfantes = new Tablainfantes();
+            tablainfantes.Show();
+        }
     }
 }
