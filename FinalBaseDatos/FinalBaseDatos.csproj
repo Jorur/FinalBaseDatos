@@ -325,5 +325,32 @@
   <ItemGroup>
     <None Include="Resources\fondo-textura-cohete-espacial-artesania-arcilla-plastilina-azul-ninos.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tienda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carrito.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lavanderia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\serviciosad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondoMenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ConsTienda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\espmed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lav.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

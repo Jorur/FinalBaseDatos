@@ -73,6 +73,26 @@ namespace FinalBaseDatos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap carrito {
+            get {
+                object obj = ResourceManager.GetObject("carrito", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ConsTienda {
+            get {
+                object obj = ResourceManager.GetObject("ConsTienda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap depositphotos_523518512_stock_illustration_thin_line_baby_background_outline {
             get {
                 object obj = ResourceManager.GetObject("depositphotos_523518512_stock_illustration_thin_line_baby_background_outline", resourceCulture);
@@ -83,14 +103,16 @@ namespace FinalBaseDatos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-
-        internal static System.Drawing.Bitmap PhotoRoom_20230531_181445 {
+        internal static System.Drawing.Bitmap espmed {
             get {
-                object obj = ResourceManager.GetObject("PhotoRoom_20230531_181445", resourceCulture);
+                object obj = ResourceManager.GetObject("espmed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap family {
             get {
                 object obj = ResourceManager.GetObject("family", resourceCulture);
@@ -121,9 +143,69 @@ namespace FinalBaseDatos.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fondoMenu {
+            get {
+                object obj = ResourceManager.GetObject("fondoMenu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Lav {
+            get {
+                object obj = ResourceManager.GetObject("Lav", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lavanderia {
+            get {
+                object obj = ResourceManager.GetObject("lavanderia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PhotoRoom_20230531_181445 {
+            get {
+                object obj = ResourceManager.GetObject("PhotoRoom_20230531_181445", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngwing_com {
+            get {
+                object obj = ResourceManager.GetObject("pngwing_com", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap rainbowglitter {
             get {
                 object obj = ResourceManager.GetObject("rainbowglitter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap serviciosad {
+            get {
+                object obj = ResourceManager.GetObject("serviciosad", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
