@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalBaseDatos.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,22 +16,7 @@ namespace FinalBaseDatos
     {
         private Factura factura;
         private Finanzas finanzas;
-        private static SqlConnection ConexionDb()
-        {
-            string connString = "Data Source = ATHENEA ; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
-            //string connString = "Data Source = EMILIANA\\MSSQLSERVER01 ; Initial Catalog = GuarderiaFinal; User ID = emifinal; Password = Passw0rd";
-            SqlConnection conn = new SqlConnection(connString);
-            try
-            {
-                conn.Open();
-                //MessageBox.Show("Conexion con la base de datos exitosa");
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
-            return conn;
-        }
+        
 
         public Mensualidad()
         {
@@ -52,7 +38,8 @@ namespace FinalBaseDatos
 
         private void pagar_Click(object sender, EventArgs e)
         {
-            SqlConnection conexion = ConexionDb();
+            Conexion db = new Conexion();
+            SqlConnection conexion = db.ConexionDb();
             SqlCommand comm = new SqlCommand("Reporte_cargoMes", conexion);
             int numeroMes;
             if(combomes.Text != "" && infante.Text != "" && año.Text != "")
@@ -158,7 +145,8 @@ namespace FinalBaseDatos
 
         private void radioMenu_CheckedChanged(object sender, EventArgs e)
         {
-            SqlConnection conexion = ConexionDb();
+            Conexion db = new Conexion();
+            SqlConnection conexion = db.ConexionDb();
             SqlCommand comm = new SqlCommand("ReporteMenus", conexion);
             int numeroMes;
             if (combomes.Text != "" && infante.Text != "" && año.Text != "")
@@ -254,7 +242,8 @@ namespace FinalBaseDatos
 
         private void radioServicios_CheckedChanged(object sender, EventArgs e)
         {
-            SqlConnection conexion = ConexionDb();
+            Conexion db = new Conexion();
+            SqlConnection conexion = db.ConexionDb();
             SqlCommand comm = new SqlCommand("ReporteCobranzaServAd", conexion);
             int numeroMesser;
             if (combomes.Text != "" && infante.Text != "" && año.Text != "")
@@ -345,7 +334,8 @@ namespace FinalBaseDatos
 
         private void radiotienda_CheckedChanged(object sender, EventArgs e)
         {
-            SqlConnection conexion = ConexionDb();
+            Conexion db = new Conexion();
+            SqlConnection conexion = db.ConexionDb();
             SqlCommand comm = new SqlCommand("ReporteConsumosTiendas", conexion);
             int numeroMesti;
             if (combomes.Text != "" && infante.Text != "" && año.Text != "")

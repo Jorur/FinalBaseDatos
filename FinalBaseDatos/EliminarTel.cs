@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalBaseDatos.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,22 +16,7 @@ namespace FinalBaseDatos
     {
         private Inicio inicio;
         private Telefonos telefonos;
-        private static SqlConnection ConexionDb()
-        {
-            string connString = "Data Source = ATHENEA ; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
-            //string connString = "Data Source = EMILIANA\\MSSQLSERVER01 ; Initial Catalog = GuarderiaFinal; User ID = emifinal; Password = Passw0rd";
-            SqlConnection conn = new SqlConnection(connString);
-            try
-            {
-                conn.Open();
-                //MessageBox.Show("Conexion con la base de datos exitosa");
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
-            return conn;
-        }
+        
         public EliminarTel()
         {
             InitializeComponent();
@@ -39,8 +25,9 @@ namespace FinalBaseDatos
 
         private void Conf_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = ConexionDb();
-            SqlCommand comm = new SqlCommand("BorrarTel", conn);
+            Conexion db = new Conexion();
+            SqlConnection conexion = db.ConexionDb();
+            SqlCommand comm = new SqlCommand("BorrarTel", conexion);
             if(Ci.Text != "" && Telefono.Text != "")
             {
                 try
@@ -62,7 +49,7 @@ namespace FinalBaseDatos
             }
 
             comm.Dispose();
-            conn.Close();
+            conexion.Close();
             inicio.Show();
             this.Close();
 

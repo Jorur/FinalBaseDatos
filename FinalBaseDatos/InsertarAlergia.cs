@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalBaseDatos.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,30 +16,13 @@ namespace FinalBaseDatos
     {
         private Inicio inicio;
         private PerInf volviendo;
-        private static SqlConnection ConexionDb()
-        {
-
-            //string connString = "Data Source = Fabian ; Initial Catalog = GuarderiaFinal; User ID = Fabiaan; Password = Password";
-            string connString = "Data Source = ATHENEA ; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
-            //string connString = "Data Source = EMILIANA\\MSSQLSERVER01 ; Initial Catalog = GuarderiaFinal; User ID = emifinal; Password = Passw0rd";
-
-            SqlConnection conn = new SqlConnection(connString);
-            try
-            {
-                conn.Open();
-                //MessageBox.Show("Conexion con la base de datos exitosa");
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
-            return conn;
-        }
+       
         public InsertarAlergia()
         {
             InitializeComponent();
             //para la tabla
-            SqlConnection conexion = ConexionDb();
+            Conexion db = new Conexion();
+            SqlConnection conexion = db.ConexionDb();
             SqlCommand comm = new SqlCommand("select nromatricula , nombre from Infantes where FechaBaja is null order by Nombre", conexion);
             SqlDataAdapter adapter = new SqlDataAdapter(comm);
             DataTable dt = new DataTable();
@@ -50,8 +34,9 @@ namespace FinalBaseDatos
 
         private void Conf_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = ConexionDb();
-            SqlCommand comm = new SqlCommand("TieneAlergia", conn);
+            Conexion db = new Conexion();
+            SqlConnection conexion = db.ConexionDb();
+            SqlCommand comm = new SqlCommand("TieneAlergia", conexion);
             if(NroMatricula.Text != "" && cmbingre.Text != "")
             {
                 try
@@ -74,7 +59,7 @@ namespace FinalBaseDatos
             }
 
             comm.Dispose();
-            conn.Close();
+            conexion.Close();
             inicio = new Inicio();
             inicio.Show();
             this.Close();

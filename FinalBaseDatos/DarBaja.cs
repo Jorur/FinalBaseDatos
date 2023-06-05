@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalBaseDatos.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,22 +17,6 @@ namespace FinalBaseDatos
         private CambiosPi cambios;
         private Inicio inicio;
 
-        public static SqlConnection ConexionDB()
-        {
-            string connString = "Data Source = ATHENEA ; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
-            //string connString = "Data Source = EMILIANA\\MSSQLSERVER01 ; Initial Catalog = GuarderiaFinal; User ID = emifinal; Password = Passw0rd";
-            SqlConnection conn = new SqlConnection(connString);
-            try
-            {
-                conn.Open();
-                //MessageBox.Show("Conexion con la base de datos exitosa");
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
-            return conn;
-        }
 
         public DarBaja()
         {
@@ -39,7 +24,8 @@ namespace FinalBaseDatos
             inicio = new Inicio();
 
             string consulta = "select nromatricula , nombre from Infantes where FechaBaja is null order by Nombre";
-            SqlConnection conexion = ConexionDB();
+            Conexion db = new Conexion();
+            SqlConnection conexion = db.ConexionDb();
             SqlDataAdapter adapter = new SqlDataAdapter(consulta, conexion);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -77,8 +63,9 @@ namespace FinalBaseDatos
 
         private void conf_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = ConexionDB();
-            SqlCommand comm = new SqlCommand("DardeBaja", conn);
+            Conexion db = new Conexion();
+            SqlConnection conexion = db.ConexionDb();
+            SqlCommand comm = new SqlCommand("DardeBaja", conexion);
             if(ingresarnm.Text != "")
             {
                 try
@@ -98,7 +85,7 @@ namespace FinalBaseDatos
                 MessageBox.Show("Ingrese los datos por favor...");
             }
             comm.Dispose();
-            conn.Close();
+            conexion.Close();
         }
     }
 }

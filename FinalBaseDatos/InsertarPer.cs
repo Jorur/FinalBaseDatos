@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalBaseDatos.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,23 +18,7 @@ namespace FinalBaseDatos
         private Inicio inicio;
         private Infante inf;
         private EncargadoEx encargado;
-        public static SqlConnection ConexionDB()
-        {
-            string connString = "Data Source = ATHENEA ; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
-            //string connString = "Data Source = EMILIANA\\MSSQLSERVER01 ; Initial Catalog = GuarderiaFinal; User ID = emifinal; Password = Passw0rd";
-
-            SqlConnection conn = new SqlConnection(connString);
-            try
-            {
-                conn.Open();
-                //MessageBox.Show("Conexion con la base de datos exitosa");
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
-            return conn;
-        }
+       
         public InsertarPer(Infante infante)
         {
             InitializeComponent();
@@ -49,7 +34,8 @@ namespace FinalBaseDatos
         private void button1_Click(object sender, EventArgs e)
         {
             //Procedimiento de Insertar Persona
-            SqlConnection conexion = ConexionDB();
+            Conexion db = new Conexion();
+            SqlConnection conexion = db.ConexionDb();
             SqlCommand comm = new SqlCommand("RegInf", conexion);
             if(Ci.Text != "" && NombreEncargado.Text != "" && Direccion.Text != "" && Parentesco.Text != "" && Celular.Text != "" && CuentaBco.Text != "" && Banco.Text != "")
             {

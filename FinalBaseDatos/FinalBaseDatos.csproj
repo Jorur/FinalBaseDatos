@@ -133,6 +133,7 @@
     <Compile Include="Mensualidad.Designer.cs">
       <DependentUpon>Mensualidad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Conexion.cs" />
     <Compile Include="Models\Infante.cs" />
     <Compile Include="PerInf.cs">
       <SubType>Form</SubType>

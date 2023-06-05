@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalBaseDatos.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,22 +17,6 @@ namespace FinalBaseDatos
         private Inicio inicio;
         private TablasAR tabla;
         private TodaBaja bajas;
-        private static SqlConnection ConexionDb()
-        {
-            string connString = "Data Source = ATHENEA ; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
-            //string connString = "Data Source = EMILIANA\\MSSQLSERVER01 ; Initial Catalog = GuarderiaFinal; User ID = emifinal; Password = Passw0rd";
-            SqlConnection conn = new SqlConnection(connString);
-            try
-            {
-                conn.Open();
-                //MessageBox.Show("Conexion con la base de datos exitosa");
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
-            return conn;
-        }
         public Buscando()
         {
             InitializeComponent();
@@ -52,7 +37,8 @@ namespace FinalBaseDatos
                 {
                     if (radioNiño.Checked)
                     {
-                        SqlConnection conexion = ConexionDb();
+                        Conexion db = new Conexion();
+                        SqlConnection conexion = db.ConexionDb();
                         SqlCommand comm = new SqlCommand("DatosGenerales", conexion);
                         comm.CommandType = System.Data.CommandType.StoredProcedure;
                         comm.Parameters.AddWithValue("@nombre", Dato.Text);
@@ -68,7 +54,8 @@ namespace FinalBaseDatos
 
                     if (radioAdulto.Checked)
                     {
-                        SqlConnection conexion = ConexionDb();
+                        Conexion db = new Conexion();
+                        SqlConnection conexion = db.ConexionDb();
                         SqlCommand comm = new SqlCommand("DatosGenerales2", conexion);
                         comm.CommandType = System.Data.CommandType.StoredProcedure;
                         comm.Parameters.AddWithValue("@CI", Dato.Text);

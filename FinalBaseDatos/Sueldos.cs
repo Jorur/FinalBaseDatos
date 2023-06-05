@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalBaseDatos.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,22 +15,7 @@ namespace FinalBaseDatos
     public partial class Sueldos : Form
     {
         private Finanzas fin;
-        private static SqlConnection ConexionDb()
-        {
-            string connString = "Data Source = ATHENEA ; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
-            //string connString = "Data Source = EMILIANA\\MSSQLSERVER01 ; Initial Catalog = GuarderiaFinal; User ID = emifinal; Password = Passw0rd";
-            SqlConnection conn = new SqlConnection(connString);
-            try
-            {
-                conn.Open();
-                //MessageBox.Show("Conexion con la base de datos exitosa");
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
-            return conn;
-        }
+        
 
         public Sueldos()
         {
@@ -45,7 +31,8 @@ namespace FinalBaseDatos
 
         private void busca_Click(object sender, EventArgs e)
         {
-            SqlConnection conexion = ConexionDb();
+            Conexion db = new Conexion();
+            SqlConnection conexion = db.ConexionDb();
             SqlCommand comm = new SqlCommand("ReporteSueldos", conexion);
             int numeroMes;
             int actual = DateTime.Now.Year;

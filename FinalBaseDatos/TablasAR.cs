@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalBaseDatos.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,22 +14,7 @@ namespace FinalBaseDatos
 {
     public partial class TablasAR : Form
     {
-        public static SqlConnection ConexionDB()
-        {
-            string connString = "Data Source = ATHENEA ; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
-            //string connString = "Data Source = EMILIANA\\MSSQLSERVER01 ; Initial Catalog = GuarderiaFinal; User ID = emifinal; Password = Passw0rd";
-            SqlConnection conn = new SqlConnection(connString);
-            try
-            {
-                conn.Open();
-                //MessageBox.Show("Conexion con la base de datos exitosa");
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
-            return conn;
-        }
+        
 
         //mostrando
         public TablasAR(string nromatricula, string tipo)
@@ -37,7 +23,8 @@ namespace FinalBaseDatos
 
             if (tipo == "alergia")
             {
-                SqlConnection conexion = ConexionDB();
+                Conexion db = new Conexion();
+                SqlConnection conexion = db.ConexionDb();
                 SqlCommand comm = new SqlCommand("AlergiaReporte", conexion);
                 try
                 {
@@ -64,7 +51,8 @@ namespace FinalBaseDatos
 
             if(tipo == "responsable")
             {
-                SqlConnection conexion = ConexionDB();
+                Conexion db = new Conexion();
+                SqlConnection conexion = db.ConexionDb();
                 SqlCommand comm = new SqlCommand("Responsables", conexion);
                 try
                 {

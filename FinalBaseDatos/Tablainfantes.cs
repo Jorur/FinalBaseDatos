@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalBaseDatos.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,29 +14,15 @@ namespace FinalBaseDatos
 {
     public partial class Tablainfantes : Form
     {
-        public static SqlConnection ConexionDB()
-        {
-            string connString = "Data Source = ATHENEA ; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
-            //string connString = "Data Source = EMILIANA\\MSSQLSERVER01 ; Initial Catalog = GuarderiaFinal; User ID = emifinal; Password = Passw0rd";
-            SqlConnection conn = new SqlConnection(connString);
-            try
-            {
-                conn.Open();
-                //MessageBox.Show("Conexion con la base de datos exitosa");
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
-            return conn;
-        }
+        
         public Tablainfantes()
         {
             InitializeComponent();
 
             //mostrando tablas
             string consulta = "select nromatricula , nombre from Infantes where FechaBaja is null order by Nombre";
-            SqlConnection conexion = ConexionDB();
+            Conexion db = new Conexion();
+            SqlConnection conexion = db.ConexionDb();
             SqlDataAdapter adapter = new SqlDataAdapter(consulta, conexion);
             DataTable dt = new DataTable();
             adapter.Fill(dt);

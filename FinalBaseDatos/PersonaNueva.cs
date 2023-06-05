@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalBaseDatos.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,23 +16,6 @@ namespace FinalBaseDatos
     {
         private Inicio inicio;
         private Tablainfantes tablainfantes;
-        public static SqlConnection ConexionDB()
-        {
-            string connString = "Data Source = ATHENEA ; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
-            //string connString = "Data Source = EMILIANA\\MSSQLSERVER01 ; Initial Catalog = GuarderiaFinal; User ID = emifinal; Password = Passw0rd";
-            SqlConnection conn = new SqlConnection(connString);
-            try
-            {
-                conn.Open();
-                //MessageBox.Show("Conexion con la base de datos exitosa");
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
-            return conn;
-        }
-
         private PerInf start = new PerInf();   
         public PersonaNueva()
         {
@@ -48,7 +32,8 @@ namespace FinalBaseDatos
 
         private void Confirmar_Click(object sender, EventArgs e)
         {
-            SqlConnection conexion = ConexionDB();
+            Conexion db = new Conexion();
+            SqlConnection conexion = db.ConexionDb();
             SqlCommand comm = new SqlCommand("InsertarPersona",conexion);
             if(Ci.Text != "" && Nombre.Text != "" && Dir.Text != "" && nroMatricula.Text != "" && Parent.Text != "" && Telf.Text != "")
             {
