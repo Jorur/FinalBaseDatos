@@ -15,6 +15,7 @@ namespace FinalBaseDatos
     {
         private Factura factura;
         private Finanzas finanzas;
+        Tablainfantes tablainfantes;
         private static SqlConnection ConexionDb()
         {
             //string connString = "Data Source = ATHENEA ; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
@@ -435,6 +436,12 @@ namespace FinalBaseDatos
 
             conexion.Close();
             comm.Dispose();
+        }
+
+        private void go_Click(object sender, EventArgs e)
+        {
+            tablainfantes = new Tablainfantes();
+            tablainfantes.Show();
         }
     }
 }

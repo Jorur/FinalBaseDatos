@@ -158,6 +158,7 @@
             this.cmbArticulo.Name = "cmbArticulo";
             this.cmbArticulo.Size = new System.Drawing.Size(155, 24);
             this.cmbArticulo.TabIndex = 10;
+            this.cmbArticulo.SelectedIndexChanged += new System.EventHandler(this.cmbArticulo_SelectedIndexChanged);
             // 
             // ConsumoTienda
             // 

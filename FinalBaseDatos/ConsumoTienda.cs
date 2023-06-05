@@ -144,5 +144,10 @@ namespace FinalBaseDatos
             tablainfantes = new Tablainfantes();
             tablainfantes.Show();
         }
+
+        private void cmbArticulo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
