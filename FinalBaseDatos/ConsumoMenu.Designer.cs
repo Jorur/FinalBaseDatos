@@ -38,68 +38,87 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(54, 398);
+            this.button1.BackColor = System.Drawing.Color.LightSlateGray;
+            this.button1.Font = new System.Drawing.Font("Corbel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(26, 312);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(62, 32);
             this.button1.TabIndex = 0;
             this.button1.Text = "Volver";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // NroMatricula
             // 
-            this.NroMatricula.Location = new System.Drawing.Point(123, 107);
+            this.NroMatricula.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.NroMatricula.Location = new System.Drawing.Point(217, 136);
+            this.NroMatricula.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NroMatricula.Name = "NroMatricula";
-            this.NroMatricula.Size = new System.Drawing.Size(100, 22);
+            this.NroMatricula.Size = new System.Drawing.Size(76, 20);
             this.NroMatricula.TabIndex = 1;
             this.NroMatricula.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // NroMenu
             // 
-            this.NroMenu.Location = new System.Drawing.Point(123, 198);
+            this.NroMenu.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.NroMenu.Location = new System.Drawing.Point(217, 222);
+            this.NroMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NroMenu.Name = "NroMenu";
-            this.NroMenu.Size = new System.Drawing.Size(100, 22);
+            this.NroMenu.Size = new System.Drawing.Size(76, 20);
             this.NroMenu.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(123, 85);
+            this.label1.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(214, 108);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(170, 16);
+            this.label1.Size = new System.Drawing.Size(203, 19);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Ingrese el Nro. de Matricula";
+            this.label1.Text = "Ingrese el Nro. de Matricula:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(123, 176);
+            this.label2.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(214, 192);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 16);
+            this.label2.Size = new System.Drawing.Size(177, 19);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Ingrese el Nro. de Menu";
+            this.label2.Text = "Ingrese el Nro. de Menu:";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(676, 397);
+            this.button2.BackColor = System.Drawing.Color.LightSlateGray;
+            this.button2.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(476, 299);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 41);
+            this.button2.Size = new System.Drawing.Size(97, 56);
             this.button2.TabIndex = 5;
             this.button2.Text = "Confirmar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // ConsumoMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = global::FinalBaseDatos.Properties.Resources.fondoMenu;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.NroMenu);
             this.Controls.Add(this.NroMatricula);
             this.Controls.Add(this.button1);
+            this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ConsumoMenu";
             this.Text = "ConsumoMenu";
             this.ResumeLayout(false);
