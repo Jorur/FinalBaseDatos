@@ -48,7 +48,8 @@ namespace FinalBaseDatos
             SqlConnection conexion = ConexionDb();
             SqlCommand comm = new SqlCommand("ReporteSueldos", conexion);
             int numeroMes;
-            if(cmbMes.Text != "" && cmbEncargados.Text != "" && año.Text != "" )
+            int actual = DateTime.Now.Year;
+            if (cmbMes.Text != "" && cmbEncargados.Text != "" && año.Text != ""  && int.Parse(año.Text) >= 2023 && int.Parse(año.Text) < actual+1)
             {
                 try
                 {
@@ -131,7 +132,7 @@ namespace FinalBaseDatos
             }
             else
             {
-                MessageBox.Show("Ingrese los datos por favor...");
+                MessageBox.Show("Ingrese los datos correspondientes por favor...");
             }
             
             conexion.Close();

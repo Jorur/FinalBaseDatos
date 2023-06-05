@@ -197,6 +197,7 @@
             // 
             // combomes
             // 
+            this.combomes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combomes.FormattingEnabled = true;
             this.combomes.Items.AddRange(new object[] {
             "Enero",

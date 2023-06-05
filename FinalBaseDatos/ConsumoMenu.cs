@@ -14,6 +14,7 @@ namespace FinalBaseDatos
     public partial class ConsumoMenu : Form
     {
         private Consumos consumos;
+        private Tablainfantes tablainfantes;
         public static SqlConnection ConexionDB()
         {
             //string connString = "Data Source = Fabian\\SQLEXPRESS01 ; Initial Catalog = GuarderiaFinal; User ID = Fabiaan; Password = Password";
@@ -53,13 +54,13 @@ namespace FinalBaseDatos
         {
             SqlConnection conn = ConexionDB();
             SqlCommand comm = new SqlCommand("InsertarConsumoMenu", conn);
-            if(NroMatricula.Text != "" && NroMenu.Text != "")
+            if(NroMatricula.Text != "" && cmbMenu.Text != "")
             {
                 try
                 {
                     comm.CommandType = System.Data.CommandType.StoredProcedure;
                     comm.Parameters.AddWithValue("@NroMatricula", NroMatricula.Text);
-                    comm.Parameters.AddWithValue("@NroMenu", NroMenu.Text);
+                    comm.Parameters.AddWithValue("@NroMenu", cmbMenu.Text);
                     comm.ExecuteNonQuery();
 
                     MessageBox.Show("Se ha ingresado el consumo con exito...");
@@ -83,6 +84,13 @@ namespace FinalBaseDatos
 
         private void label1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void Ver_Click(object sender, EventArgs e)
+        {
+            tablainfantes = new Tablainfantes();
+            tablainfantes.Show();
 
         }
     }

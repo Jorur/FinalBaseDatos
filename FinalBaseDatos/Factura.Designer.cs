@@ -152,7 +152,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::FinalBaseDatos.Properties.Resources.rainbowglitter;
-            this.pictureBox1.Location = new System.Drawing.Point(302, 462);
+            this.pictureBox1.Location = new System.Drawing.Point(156, 436);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(75, 33);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
