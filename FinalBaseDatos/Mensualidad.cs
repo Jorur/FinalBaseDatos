@@ -16,7 +16,7 @@ namespace FinalBaseDatos
     {
         private Factura factura;
         private Finanzas finanzas;
-        
+        private Tablainfantes tablainfantes;
 
         public Mensualidad()
         {

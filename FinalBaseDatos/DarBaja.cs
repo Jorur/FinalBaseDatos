@@ -45,12 +45,13 @@ namespace FinalBaseDatos
 
         private void tablaniños_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           /* SqlConnection conexion = ConexionDB();
-            SqlCommand comm = new SqlCommand("select nromatricula , nombre from Infantes order by Nombre", conexion);
-            SqlDataAdapter adapter = new SqlDataAdapter(comm);
-            DataTable dt = new DataTable();
-            adapter.Fill(dt);
-            */
+            /* Conexion db = new Conexion();
+              SqlConnection conexion = db.ConexionDb();
+             SqlCommand comm = new SqlCommand("select nromatricula , nombre from Infantes order by Nombre", conexion);
+             SqlDataAdapter adapter = new SqlDataAdapter(comm);
+             DataTable dt = new DataTable();
+             adapter.Fill(dt);
+             */
 
         }
 
