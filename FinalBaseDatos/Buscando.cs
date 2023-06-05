@@ -18,7 +18,7 @@ namespace FinalBaseDatos
         private TodaBaja bajas;
         private static SqlConnection ConexionDb()
         {
-            string connString = "Data Source = ATHENEA ; Initial Catalog = GuarderiaFinal; User ID = jorge; Password = Password";
+            string connString = "Data Source = DESKTOP-7IHEVRL ; Initial Catalog = GuarderiaFinal; User ID = BrendaNury; Password = Password";
             //string connString = "Data Source = EMILIANA\\MSSQLSERVER01 ; Initial Catalog = GuarderiaFinal; User ID = emifinal; Password = Passw0rd";
             SqlConnection conn = new SqlConnection(connString);
             try
